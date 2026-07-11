@@ -122,6 +122,41 @@ export default function MethodologyPage() {
         </p>
       </Section>
 
+      <Section title="Coverage tiers">
+        <p>
+          Places come at two levels of depth, labeled honestly throughout the site:
+        </p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            <strong>Deep profiles</strong> — individually researched, and in some cases surveyed on
+            the ground. Each carries a written profile and metric-by-metric sourcing. The five pilot
+            anchors are here.
+          </li>
+          <li>
+            <strong>Estimates</strong> — scored from shared national data so an entire state can be
+            covered at once. Real measures (income, life expectancy, traffic deaths, broadband, park
+            access, drinking-water safety, child poverty) come from{" "}
+            <a href="https://www.countyhealthrankings.org" target="_blank" rel="noopener noreferrer" className="text-civic hover:underline">
+              County Health Rankings
+            </a>{" "}
+            and the datasets behind it; the remaining civic metrics are modeled from how urban or
+            rural a county is — deliberately <em>not</em> from its income, so civic wealth stays
+            independent of private wealth. Every Indiana county is covered at this tier or deeper.
+          </li>
+        </ul>
+      </Section>
+
+      <Section title="The Sovereignty Gap">
+        <p>
+          The gap is the private-wealth score minus the Civic Wealth Index, both on the same fixed
+          0–100 benchmark scale. Because it&apos;s anchored rather than ranked against the current
+          set of places, a county&apos;s gap doesn&apos;t change when neighbors are added — a rich,
+          under-built county reads the same whether it&apos;s measured alone or against the whole
+          state. Positive means private wealth outruns public wealth; negative means the public
+          realm is ahead.
+        </p>
+      </Section>
+
       <Section title="Known limitations">
         <ul className="list-disc space-y-2 pl-5">
           <li>

@@ -62,8 +62,9 @@ const pct = (arr, v) => { const b = arr.filter((x) => x < v).length, e = arr.fil
 console.log("\n— Scored ranking —");
 rows.sort((a, b) => b.cwi - a.cwi);
 for (const r of rows) {
-  const gap = pct(pws, r.pw) - pct(cwis, r.cwi);
-  console.log(`${r.name.padEnd(24)} CWI ${r.cwi.toFixed(1).padStart(5)}  PrivWealth ${r.pw.toFixed(1).padStart(5)}  Gap ${(gap > 0 ? "+" : "") + gap}`);
+  const gap = Math.round(r.pw - r.cwi);
+  console.log(`${r.cwi.toFixed(1).padStart(5)}  gap ${((gap > 0 ? "+" : "") + gap).padStart(4)}  ${r.name}`);
 }
+void pct;
 console.log(ok ? "\n✅ ALL FILES VALID" : "\n❌ VALIDATION FAILED");
 process.exit(ok ? 0 : 1);

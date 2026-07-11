@@ -8,7 +8,8 @@ import type { PillarKey } from "@/lib/types";
 
 export default function Home() {
   const places = getScoredPlaces();
-  const surveyed = places.filter((p) => p.fieldSurveyed).length;
+  const deep = places.filter((p) => p.profile !== "estimate");
+  const inCount = places.filter((p) => p.state === "IN").length;
 
   return (
     <div>
@@ -81,20 +82,25 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-5 py-16">
         <div className="mb-6 flex items-end justify-between gap-4">
           <div>
-            <Eyebrow>The pilot</Eyebrow>
+            <Eyebrow>Indiana, complete</Eyebrow>
             <h2 className="font-display text-3xl font-600 tracking-tight text-ink">
-              {places.length} places, measured
+              All {inCount} counties, plus the anchors
             </h2>
           </div>
           <Link href="/rankings" className="text-sm font-600 text-civic hover:underline">
             Full rankings →
           </Link>
         </div>
-        <RankTable places={places} />
+        <RankTable places={deep} />
         <p className="mt-4 text-sm text-ink-faint">
-          A deliberately varied pilot — from Carmel&apos;s roundabout-and-trail suburbia to Gary&apos;s
-          inherited industrial capital — chosen so the measure has to prove itself. {surveyed} of{" "}
-          {places.length} were surveyed on the ground.
+          The five deep-profile anchors above are individually researched and, where noted,
+          surveyed on the ground — from Carmel&apos;s roundabout-and-trail suburbia to Gary&apos;s
+          inherited industrial capital. Every one of Indiana&apos;s {inCount} counties is scored from
+          shared national data on the{" "}
+          <Link href="/rankings" className="text-civic hover:underline">
+            full rankings
+          </Link>
+          .
         </p>
       </section>
 

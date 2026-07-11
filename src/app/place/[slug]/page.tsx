@@ -101,6 +101,17 @@ export default async function PlacePage({
         </div>
       </header>
 
+      {place.profile === "estimate" && (
+        <div className="mt-8 rounded-xl border border-gold/40 bg-gold/5 px-5 py-3 text-sm text-ink-soft">
+          <strong className="text-ink">Estimate profile.</strong>{" "}
+          This county is scored from shared
+          national data (County Health Rankings and related sources). Real measures — income, life
+          expectancy, traffic deaths, broadband, park access, water safety — sit alongside metrics
+          modeled from how urban or rural the county is. It hasn&apos;t been individually researched
+          or surveyed yet. Every metric below shows its own quality flag.
+        </div>
+      )}
+
       {/* Reading of the gap */}
       <div className="mt-8 rounded-xl border-l-4 bg-paper-raised/70 px-5 py-4"
         style={{ borderColor: scoreColor(100 - Math.abs(place.sovereigntyGap)) }}>

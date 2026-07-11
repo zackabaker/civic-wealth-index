@@ -31,6 +31,8 @@ export default function RankTable({ places }: { places: ScoredPlace[] }) {
                   <span className="text-xs text-ink-faint">
                     {p.metro}
                     {p.fieldSurveyed && " · field-surveyed"}
+                    {!p.fieldSurveyed && p.profile === "deep" && " · researched"}
+                    {p.profile === "estimate" && " · estimate"}
                   </span>
                 </Link>
               </td>

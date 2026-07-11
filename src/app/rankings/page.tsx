@@ -22,6 +22,12 @@ export default function RankingsPage() {
         Places ordered by their Civic Wealth Index. The Sovereignty Gap column shows whether each is
         richer than its public realm (positive) or has built beyond its incomes (negative).
       </p>
+      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-faint">
+        All {places.filter((p) => p.state === "IN").length} Indiana counties are included, alongside
+        two out-of-state anchors. Rows marked <em>estimate</em> are scored from shared national data
+        with several metrics modeled from urbanicity; <em>researched</em> and <em>field-surveyed</em>{" "}
+        rows are individually sourced. Every score links to its inputs.
+      </p>
 
       <div className="mt-10">
         <RankTable places={places} />

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function GapsPage() {
-  const places = getScoredPlaces();
+  const places = getScoredPlaces().filter((p) => p.profile !== "estimate");
   const widest = [...places].sort((x, y) => y.sovereigntyGap - x.sovereigntyGap)[0];
   const tightest = [...places].sort((x, y) => x.sovereigntyGap - y.sovereigntyGap)[0];
 
@@ -63,7 +63,7 @@ export default function GapsPage() {
       {/* The two poles */}
       <div className="my-12 grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-line bg-paper-raised p-5">
-          <div className="text-sm text-ink-faint">Widest gap in the pilot</div>
+          <div className="text-sm text-ink-faint">Widest gap</div>
           <Link href={`/place/${widest.slug}`} className="font-display text-xl font-600 text-ink hover:text-civic">
             {widest.name}, {widest.state}
           </Link>
@@ -93,10 +93,12 @@ export default function GapsPage() {
       <div className="rounded-2xl border border-line bg-paper-raised/60 p-6">
         <h2 className="font-display text-xl font-600 text-ink">How we compute it</h2>
         <p className="mt-2 leading-relaxed text-ink-soft">
-          We rank each place&apos;s private wealth and its Civic Wealth Index against the others, as
-          percentiles. The Sovereignty Gap is the private-wealth percentile minus the civic-wealth
-          percentile. Positive means private wealth outruns public wealth; negative means the public
-          realm is ahead.
+          We score each place&apos;s private wealth (incomes and home values) and its Civic Wealth
+          Index on the same fixed 0–100 scale, then subtract. The Sovereignty Gap is private minus
+          civic. Because both are measured against fixed national benchmarks rather than ranked
+          against whichever places happen to be in the set, a place&apos;s gap stays put as more
+          places are added — it describes the place, not the crowd around it. Positive means private
+          wealth outruns public wealth; negative means the public realm is ahead.
         </p>
         <Link href="/methodology" className="mt-4 inline-block text-sm font-600 text-civic hover:underline">
           Full methodology →

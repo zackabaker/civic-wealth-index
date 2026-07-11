@@ -7,7 +7,7 @@ import type { ScoredPlace } from "@/lib/types";
 
 type P = Pick<
   ScoredPlace,
-  "slug" | "name" | "state" | "cwi" | "privateWealthScore" | "sovereigntyGap"
+  "slug" | "name" | "state" | "cwi" | "privateWealthScore" | "sovereigntyGap" | "profile"
 >;
 
 export default function GapScatter({ places }: { places: P[] }) {
@@ -81,43 +81,62 @@ export default function GapScatter({ places }: { places: P[] }) {
             rich, little to show
           </text>
 
-          {/* points */}
-          {places.map((p) => {
-            const cx = x(p.privateWealthScore);
-            const cy = y(p.cwi);
-            const active = hover === p.slug;
-            return (
-              <g
+          {/* estimate-tier cloud: small dots, labelled only on hover */}
+          {places
+            .filter((p) => p.profile === "estimate" && hover !== p.slug)
+            .map((p) => (
+              <circle
                 key={p.slug}
+                cx={x(p.privateWealthScore)}
+                cy={y(p.cwi)}
+                r={4}
+                fill={gapColor(p.sovereigntyGap)}
+                opacity={0.45}
                 className="cursor-pointer"
                 onMouseEnter={() => setHover(p.slug)}
-                onMouseLeave={() => setHover(null)}
                 onClick={() => router.push(`/place/${p.slug}`)}
-              >
-                {/* drop line to the diagonal shows the size of the gap */}
-                <line
-                  x1={cx}
-                  y1={cy}
-                  x2={x(p.privateWealthScore)}
-                  y2={y(p.privateWealthScore)}
-                  stroke={gapColor(p.sovereigntyGap)}
-                  strokeWidth={active ? 2 : 1}
-                  strokeDasharray="2 3"
-                  opacity={active ? 0.9 : 0.4}
-                />
-                <circle cx={cx} cy={cy} r={active ? 9 : 7} fill={gapColor(p.sovereigntyGap)} stroke="var(--paper-raised)" strokeWidth="2" />
-                <text
-                  x={cx + 12}
-                  y={cy + 4}
-                  fontSize={active ? "13" : "12"}
-                  fontWeight={active ? "700" : "600"}
-                  fill="var(--ink)"
+              />
+            ))}
+
+          {/* highlighted anchors (deep profiles) + whatever is hovered, drawn on top with labels */}
+          {places
+            .filter((p) => p.profile !== "estimate" || hover === p.slug)
+            .map((p) => {
+              const cx = x(p.privateWealthScore);
+              const cy = y(p.cwi);
+              const active = hover === p.slug;
+              return (
+                <g
+                  key={p.slug}
+                  className="cursor-pointer"
+                  onMouseEnter={() => setHover(p.slug)}
+                  onMouseLeave={() => setHover(null)}
+                  onClick={() => router.push(`/place/${p.slug}`)}
                 >
-                  {p.name.replace(" County", "")}
-                </text>
-              </g>
-            );
-          })}
+                  <line
+                    x1={cx}
+                    y1={cy}
+                    x2={cx}
+                    y2={y(p.privateWealthScore)}
+                    stroke={gapColor(p.sovereigntyGap)}
+                    strokeWidth={active ? 2 : 1}
+                    strokeDasharray="2 3"
+                    opacity={active ? 0.9 : 0.4}
+                  />
+                  <circle cx={cx} cy={cy} r={active ? 9 : 7} fill={gapColor(p.sovereigntyGap)} stroke="var(--paper-raised)" strokeWidth="2" />
+                  <text
+                    x={cx + 12}
+                    y={cy + 4}
+                    fontSize={active ? "13" : "12"}
+                    fontWeight={active ? "700" : "600"}
+                    fill="var(--ink)"
+                  >
+                    {p.name.replace(" County", "")}
+                    {p.state !== "IN" ? `, ${p.state}` : ""}
+                  </text>
+                </g>
+              );
+            })}
 
           {/* axis titles */}
           <text x={M.l + iw / 2} y={H - 8} textAnchor="middle" fontSize="12.5" fontWeight="600" fill="var(--ink-soft)">

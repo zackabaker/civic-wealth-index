@@ -1,0 +1,370 @@
+{
+  "fips": "18157",
+  "slug": "tippecanoe-county-in",
+  "name": "Tippecanoe County",
+  "state": "IN",
+  "stateName": "Indiana",
+  "kind": "county",
+  "metro": "Lafayette metro",
+  "population": 188792,
+  "populationYear": 2025,
+  "fieldSurveyed": false,
+  "profile": "estimate",
+  "privateWealth": {
+    "medianHouseholdIncome": {
+      "key": "medianHouseholdIncome",
+      "label": "Median household income",
+      "value": 61681,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "County Health Rankings 2025",
+      "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/data-and-resources",
+      "year": 2025,
+      "quality": "measured"
+    },
+    "medianHomeValue": {
+      "key": "medianHomeValue",
+      "label": "Median home value",
+      "value": 222968.526,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "CWI model estimate (v0.1)",
+      "sourceUrl": "https://civicwealthindex.org/methodology",
+      "year": "v0.1",
+      "quality": "modeled",
+      "note": "Estimated from income and urbanicity."
+    }
+  },
+  "pillars": [
+    {
+      "key": "movement",
+      "label": "Movement",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "bridgePoorPct",
+          "label": "Bridges in poor condition",
+          "value": 6.755,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "pavementPoorPct",
+          "label": "Roads in poor ride quality",
+          "value": 15.258,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "roundaboutRatio",
+          "label": "Roundabouts vs. signals",
+          "value": 0.078,
+          "unit": "ratio",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled",
+          "note": "Carmel-style roundabout adoption is rare; most counties sit near the floor."
+        },
+        {
+          "key": "trafficDeathsPer100k",
+          "label": "Traffic deaths",
+          "value": 7.242,
+          "unit": "per 100k",
+          "direction": "lowerBetter",
+          "source": "County Health Rankings 2025",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/data-and-resources",
+          "year": 2025,
+          "quality": "measured"
+        },
+        {
+          "key": "sidewalkCoverage",
+          "label": "Sidewalk network coverage",
+          "value": 0.382,
+          "unit": "km/km",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        }
+      ]
+    },
+    {
+      "key": "publicRealm",
+      "label": "Public Realm",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "parkAcresPer1k",
+          "label": "Park acres per 1,000",
+          "value": 11.639,
+          "unit": "acres/1k",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "parkAccessPct",
+          "label": "Access to exercise / parks",
+          "value": 80.871,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "County Health Rankings 2025",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/data-and-resources",
+          "year": 2025,
+          "quality": "measured",
+          "note": "CHR 'access to exercise opportunities' — a parks/recreation access proxy."
+        },
+        {
+          "key": "playgroundScore",
+          "label": "Playground quality",
+          "value": 57.099,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "libraryVisitsPerCapita",
+          "label": "Library visits per capita",
+          "value": 4.046,
+          "unit": "per capita",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "treeCanopyPct",
+          "label": "Tree canopy",
+          "value": 21.081,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        }
+      ]
+    },
+    {
+      "key": "education",
+      "label": "Education",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "learningRate",
+          "label": "Learning growth per grade",
+          "value": 0.986,
+          "unit": "grade/yr",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "gradeLevelsVsNational",
+          "label": "Grade levels vs. national",
+          "value": 0.332,
+          "unit": "grade levels",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "attainmentBachelorsPct",
+          "label": "Bachelor's degree or higher",
+          "value": 38.432,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled",
+          "note": "Estimated from CHR post-secondary education share."
+        }
+      ]
+    },
+    {
+      "key": "healthSafety",
+      "label": "Health & Safety",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "lifeExpectancy",
+          "label": "Life expectancy",
+          "value": 77.588,
+          "unit": "years",
+          "direction": "higherBetter",
+          "source": "County Health Rankings 2025",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/data-and-resources",
+          "year": 2025,
+          "quality": "measured"
+        },
+        {
+          "key": "childWellbeingIndex",
+          "label": "Child wellbeing",
+          "value": 82.216,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "County Health Rankings 2025",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/data-and-resources",
+          "year": 2025,
+          "quality": "modeled",
+          "note": "Derived from CHR children-in-poverty rate."
+        },
+        {
+          "key": "violentCrimePer1k",
+          "label": "Violent crime",
+          "value": 3.9,
+          "unit": "per 1k",
+          "direction": "lowerBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled",
+          "note": "Modeled; CHR dropped county violent-crime rates from the analytic file."
+        }
+      ]
+    },
+    {
+      "key": "systems",
+      "label": "Systems",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "waterViolationPoints",
+          "label": "Drinking water violations",
+          "value": 4.765,
+          "unit": "0-10",
+          "direction": "lowerBetter",
+          "source": "County Health Rankings 2025",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/data-and-resources",
+          "year": 2025,
+          "quality": "measured",
+          "note": "CHR flags whether the county had a drinking-water violation."
+        },
+        {
+          "key": "broadbandCoveragePct",
+          "label": "Broadband access",
+          "value": 89.466,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "County Health Rankings 2025",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/data-and-resources",
+          "year": 2025,
+          "quality": "measured"
+        },
+        {
+          "key": "broadbandGigabitPct",
+          "label": "Gigabit availability",
+          "value": 78.982,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        }
+      ]
+    },
+    {
+      "key": "civicFabric",
+      "label": "Civic Fabric",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "historicRegisterPer10k",
+          "label": "Historic Register listings",
+          "value": 3.193,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "culturalVenuesPer10k",
+          "label": "Cultural venues",
+          "value": 2.163,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "townCenterScore",
+          "label": "Town-center quality",
+          "value": 62.892,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        }
+      ]
+    },
+    {
+      "key": "stewardship",
+      "label": "Stewardship",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "realCapitalOutlayPerCapita",
+          "label": "Capital investment per capita",
+          "value": 530.436,
+          "unit": "$/capita/yr",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "capitalAssetsPerCapita",
+          "label": "Public capital assets per capita",
+          "value": 9194.692,
+          "unit": "$/capita",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        },
+        {
+          "key": "investmentTrendScore",
+          "label": "Investing now?",
+          "value": 63.284,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "CWI model estimate (v0.1)",
+          "sourceUrl": "https://civicwealthindex.org/methodology",
+          "year": "v0.1",
+          "quality": "modeled"
+        }
+      ]
+    }
+  ]
+}

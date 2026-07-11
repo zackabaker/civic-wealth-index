@@ -64,6 +64,9 @@ export interface PlaceData {
   populationYear: number;
   /** whether a human has done an on-the-ground field survey */
   fieldSurveyed: boolean;
+  /** "deep" = individually researched/surveyed; "estimate" = bulk statewide data
+   *  with several metrics modeled from urbanicity. Defaults to "deep" when absent. */
+  profile?: "deep" | "estimate";
   /** private-wealth inputs used for the Sovereignty Gap */
   privateWealth: {
     medianHouseholdIncome: Metric;
@@ -105,6 +108,7 @@ export interface ScoredPlace {
   population: number;
   populationYear: number;
   fieldSurveyed: boolean;
+  profile?: "deep" | "estimate";
   /** the headline Civic Wealth Index, 0-100 */
   cwi: number;
   /** private-wealth score, 0-100, on the same benchmark scale */

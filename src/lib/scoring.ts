@@ -94,6 +94,11 @@ export function scoreAll(places: PlaceData[]): ScoredPlace[] {
   const pws = cores.map((c) => c.pw);
 
   return cores.map((c) => {
+    // Percentiles are sample-relative (useful context on the rankings), but the
+    // Sovereignty Gap itself is benchmark-anchored — the difference between the
+    // private-wealth score and the civic-wealth score on the same fixed 0-100
+    // scale — so it stays stable as places are added, instead of shifting every
+    // time the sample changes.
     const civicWealthPercentile = percentile(cwis, c.cwi);
     const privateWealthPercentile = percentile(pws, c.pw);
     return {
@@ -109,11 +114,12 @@ export function scoreAll(places: PlaceData[]): ScoredPlace[] {
       population: c.place.population,
       populationYear: c.place.populationYear,
       fieldSurveyed: c.place.fieldSurveyed,
+      profile: c.place.profile ?? "deep",
       cwi: c.cwi,
       privateWealthScore: Math.round(c.pw * 10) / 10,
       privateWealthPercentile,
       civicWealthPercentile,
-      sovereigntyGap: privateWealthPercentile - civicWealthPercentile,
+      sovereigntyGap: Math.round(c.pw - c.cwi),
       pillars: c.pillars,
     };
   });
