@@ -1,0 +1,391 @@
+{
+  "fips": "47187",
+  "slug": "williamson-county-tn",
+  "name": "Williamson County",
+  "state": "TN",
+  "stateName": "Tennessee",
+  "kind": "county",
+  "metro": "Nashville metro",
+  "seat": "Franklin",
+  "keyPlaces": ["Franklin", "Brentwood", "Nolensville", "Spring Hill", "Fairview"],
+  "population": 264460,
+  "populationYear": 2023,
+  "fieldSurveyed": true,
+  "privateWealth": {
+    "medianHouseholdIncome": {
+      "key": "medianHouseholdIncome",
+      "label": "Median household income",
+      "value": 131202,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 5-year",
+      "sourceUrl": "https://www.census.gov/quickfacts/williamsoncountytennessee",
+      "year": 2023,
+      "quality": "measured",
+      "note": "1st of Tennessee's 95 counties; ~167% of the U.S. median."
+    },
+    "medianHomeValue": {
+      "key": "medianHomeValue",
+      "label": "Median home value",
+      "value": 673700,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 5-year",
+      "sourceUrl": "https://www.census.gov/quickfacts/williamsoncountytennessee",
+      "year": 2023,
+      "quality": "measured",
+      "note": "Roughly 2.2x the national median owner-occupied home value."
+    }
+  },
+  "pillars": [
+    {
+      "key": "movement",
+      "label": "Movement",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "bridgePoorPct",
+          "label": "Bridges in poor condition",
+          "value": 2.5,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA National Bridge Inventory",
+          "sourceUrl": "https://www.fhwa.dot.gov/bridge/nbi/no10/county22b.cfm",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled below the TN statewide poor rate (~4.4%); Williamson's ~295 bridges are relatively new and well-funded."
+        },
+        {
+          "key": "pavementPoorPct",
+          "label": "Roads in poor ride quality",
+          "value": 7.0,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA HPMS / TDOT",
+          "sourceUrl": "https://www.tn.gov/tdot.html",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled; well-maintained arterials but rapid growth strains the network. TN statewide is moderate."
+        },
+        {
+          "key": "roundaboutRatio",
+          "label": "Roundabouts vs. signalized intersections",
+          "value": 0.03,
+          "unit": "ratio",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap Overpass",
+          "sourceUrl": "https://overpass-turbo.eu/",
+          "year": 2025,
+          "quality": "field",
+          "note": "Field survey: a 'stoplight city' with very few roundabouts; near the weak anchor."
+        },
+        {
+          "key": "trafficDeathsPer100k",
+          "label": "Traffic deaths",
+          "value": 7.5,
+          "unit": "per 100k",
+          "direction": "lowerBetter",
+          "source": "NHTSA FARS / County Health Rankings",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/tennessee/williamson",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled well below the TN statewide rate (~17); Williamson is consistently the healthiest/safest county in the state."
+        },
+        {
+          "key": "sidewalkCoverage",
+          "label": "Sidewalk coverage",
+          "value": 0.18,
+          "unit": "km/km",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap",
+          "sourceUrl": "https://www.openstreetmap.org/relation/2312764",
+          "year": 2025,
+          "quality": "field",
+          "note": "Field survey: underdeveloped sidewalks; newer upscale subdivisions built without them; multi-use paths on some main roads but with many gaps."
+        }
+      ]
+    },
+    {
+      "key": "publicRealm",
+      "label": "Public Realm",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "parkAcresPer1k",
+          "label": "Park acres per 1,000 residents",
+          "value": 11.0,
+          "unit": "acres/1k",
+          "direction": "higherBetter",
+          "source": "Trust for Public Land / local parks dept",
+          "sourceUrl": "https://www.wcparksandrec.com/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Modeled from ~34 county park properties (incl. the ~800-acre SW Williamson Regional Park) plus municipal parks; acreage exists but is dispersed."
+        },
+        {
+          "key": "parkAccessPct",
+          "label": "Residents within a 10-min walk of a park",
+          "value": 33,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "TPL ParkServe",
+          "sourceUrl": "https://parkserve.tpl.org/mapping/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Modeled low: sprawling subdivisions and large-lot development put most parkland beyond a walk despite substantial acreage."
+        },
+        {
+          "key": "playgroundScore",
+          "label": "Playground quality",
+          "value": 38,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "field/modeled",
+          "sourceUrl": "https://www.wcparksandrec.com/",
+          "year": 2025,
+          "quality": "field",
+          "note": "Field survey: Franklin playgrounds dated (1990s-2000s), mostly mulch surfaces (only one rubberized), peeling paint. Brentwood's are somewhat nicer. Wealth flows to private, not public, play space."
+        },
+        {
+          "key": "libraryVisitsPerCapita",
+          "label": "Library visits per capita",
+          "value": 1.78,
+          "unit": "per capita",
+          "direction": "higherBetter",
+          "source": "IMLS Public Libraries Survey",
+          "sourceUrl": "https://sos.tn.gov/tsla/services/tennessee-public-library-statistics",
+          "year": 2023,
+          "quality": "measured",
+          "note": "~1,780.8 visits per 1,000 in legal service area; #6 of 185 TN systems. A genuine public-realm bright spot."
+        },
+        {
+          "key": "treeCanopyPct",
+          "label": "Tree canopy",
+          "value": 45,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "USFS Tree Canopy / NLCD",
+          "sourceUrl": "https://data.fs.usda.gov/geodata/rastergateway/treecanopycover/",
+          "year": 2021,
+          "quality": "modeled",
+          "note": "Modeled from the wooded rolling countryside of the Nashville Basin/Highland Rim; lower in the densely developed northern suburbs."
+        }
+      ]
+    },
+    {
+      "key": "education",
+      "label": "Education",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "learningRate",
+          "label": "Learning rate",
+          "value": 1.12,
+          "unit": "grade/yr",
+          "direction": "higherBetter",
+          "source": "SEDA (Stanford Educational Opportunity Project)",
+          "sourceUrl": "https://edopportunity.org/reports/trends/2025/TN/report_TN_4704530_williamson-county.pdf",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled above 1.0: WCS is Tennessee's #1 district (67% math / 69% reading proficiency vs. ~34%/37% statewide), consistent with above-average learning growth."
+        },
+        {
+          "key": "gradeLevelsVsNational",
+          "label": "Grade levels vs. national average",
+          "value": 1.8,
+          "unit": "grade levels",
+          "direction": "higherBetter",
+          "source": "SEDA (Stanford Educational Opportunity Project)",
+          "sourceUrl": "https://edopportunity.org/reports/trends/2025/TN/report_TN_4704530_williamson-county.pdf",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled: one of the highest-achieving districts nationally; students test well above the national mean."
+        },
+        {
+          "key": "attainmentBachelorsPct",
+          "label": "Bachelor's degree or higher (age 25+)",
+          "value": 62.5,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "Census ACS",
+          "sourceUrl": "https://www.census.gov/quickfacts/williamsoncountytennessee",
+          "year": 2023,
+          "quality": "measured",
+          "note": "62.5% (2023 ACS); ~64% in 2024 estimates vs. ~32% statewide."
+        }
+      ]
+    },
+    {
+      "key": "healthSafety",
+      "label": "Health & Safety",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "lifeExpectancy",
+          "label": "Life expectancy",
+          "value": 81.3,
+          "unit": "years",
+          "direction": "higherBetter",
+          "source": "CDC/NCHS / County Health Rankings",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/tennessee/williamson",
+          "year": 2024,
+          "quality": "measured",
+          "note": "Longest life expectancy of any TN county; ~7 years above the state average."
+        },
+        {
+          "key": "childWellbeingIndex",
+          "label": "Child wellbeing index",
+          "value": 88,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "modeled from CDC PLACES / KIDS COUNT",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/tennessee/williamson",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Modeled high: very low child poverty, top health outcomes, and top-ranked schools statewide."
+        },
+        {
+          "key": "violentCrimePer1k",
+          "label": "Violent crime",
+          "value": 1.6,
+          "unit": "per 1k",
+          "direction": "lowerBetter",
+          "source": "FBI Crime Data Explorer / TBI TIBRS",
+          "sourceUrl": "https://crimeinsight.tbi.tn.gov/tops",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled from TBI/FBI data; among the lowest violent-crime counties in Tennessee (third-party estimates run ~3.3/1k; official incident-based rate is lower)."
+        }
+      ]
+    },
+    {
+      "key": "systems",
+      "label": "Systems",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "waterViolationPoints",
+          "label": "Drinking-water violation severity",
+          "value": 2,
+          "unit": "0-10",
+          "direction": "lowerBetter",
+          "source": "EPA SDWIS",
+          "sourceUrl": "https://enviro.epa.gov/facts/sdwis/search.html",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Modeled low: major districts (Milcrofton, H.B.&T.S.) show clean current MCL compliance; Nolensville/College Grove had a minor recent coliform hit. Historical cumulative counts exist but current health-based compliance is good."
+        },
+        {
+          "key": "broadbandCoveragePct",
+          "label": "Broadband availability (100/20 Mbps)",
+          "value": 100,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC Broadband Data Collection",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2024,
+          "quality": "measured",
+          "note": "~100% of residents have access at 100/20 Mbps."
+        },
+        {
+          "key": "broadbandGigabitPct",
+          "label": "Gigabit availability",
+          "value": 74,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC Broadband Data Collection",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2024,
+          "quality": "measured",
+          "note": "~74% of residents have gigabit (1000/100 Mbps) access."
+        }
+      ]
+    },
+    {
+      "key": "civicFabric",
+      "label": "Civic Fabric",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "historicRegisterPer10k",
+          "label": "National Register listings per 10,000",
+          "value": 5.0,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "National Register of Historic Places",
+          "sourceUrl": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_Williamson_County,_Tennessee",
+          "year": 2024,
+          "quality": "measured",
+          "note": "132 NRHP listings (incl. 2 National Historic Landmarks) / ~264k residents; deep Civil War and antebellum history around Franklin."
+        },
+        {
+          "key": "culturalVenuesPer10k",
+          "label": "Cultural venues per 10,000",
+          "value": 0.9,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "IMLS Museum Universe / local",
+          "sourceUrl": "https://www.imls.gov/research-evaluation/data-collection/museum-universe-data-file",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Modeled from Franklin's museums, historic sites, the Franklin Theatre, and Factory at Franklin venues; concentrated in the county seat."
+        },
+        {
+          "key": "townCenterScore",
+          "label": "Walkable town center",
+          "value": 68,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "field/assessed",
+          "sourceUrl": "https://www.franklintn.gov/",
+          "year": 2025,
+          "quality": "field",
+          "note": "Field survey: downtown Franklin is genuinely excellent (1800s stock, tasteful, Harpeth Hotel) but a tourist rather than living downtown, with little walkable residential. Brentwood has no town center at all (pure sprawl). High quality, but the exception county-wide."
+        }
+      ]
+    },
+    {
+      "key": "stewardship",
+      "label": "Stewardship",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "realCapitalOutlayPerCapita",
+          "label": "Annual capital outlay per resident",
+          "value": 300,
+          "unit": "$/capita/yr",
+          "direction": "higherBetter",
+          "source": "Census of Governments / local ACFR",
+          "sourceUrl": "https://www.williamsoncounty-tn.gov/DocumentCenter/View/21195/FY20WilliamsonAFR",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled: heavy recent capital spending is driven almost entirely by school construction for growth, not public-realm streetscape/parks investment."
+        },
+        {
+          "key": "capitalAssetsPerCapita",
+          "label": "Net capital assets per resident",
+          "value": 4500,
+          "unit": "$/capita",
+          "direction": "higherBetter",
+          "source": "local ACFR",
+          "sourceUrl": "https://www.williamsoncounty-tn.gov/DocumentCenter/View/21195/FY20WilliamsonAFR",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled: county-government-only governmental capital assets were ~$281M in FY20 (~$1.1k/capita); adding the large WCS school-plant assets brings the combined figure to a modeled ~$4.5k/capita. Modest relative to the county's private wealth."
+        },
+        {
+          "key": "investmentTrendScore",
+          "label": "Active-investment trend",
+          "value": 55,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "assessed",
+          "sourceUrl": "https://www.williamsoncounty-tn.gov/",
+          "year": 2025,
+          "quality": "field",
+          "note": "Field/assessed: real investment is happening but concentrated in schools and roads keeping pace with growth; the walkable public realm (sidewalks, roundabouts, playgrounds) lags the times."
+        }
+      ]
+    }
+  ]
+}

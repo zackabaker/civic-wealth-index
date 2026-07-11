@@ -1,0 +1,391 @@
+{
+  "fips": "18057",
+  "slug": "hamilton-county-in",
+  "name": "Hamilton County",
+  "state": "IN",
+  "stateName": "Indiana",
+  "kind": "county",
+  "metro": "Indianapolis metro",
+  "seat": "Noblesville",
+  "keyPlaces": ["Carmel", "Fishers", "Westfield", "Noblesville"],
+  "population": 379704,
+  "populationYear": 2024,
+  "fieldSurveyed": true,
+  "privateWealth": {
+    "medianHouseholdIncome": {
+      "key": "medianHouseholdIncome",
+      "label": "Median household income",
+      "value": 125509,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 1-year (2024) via Census Reporter",
+      "sourceUrl": "http://censusreporter.org/profiles/05000US18057-hamilton-county-in/",
+      "year": 2024,
+      "quality": "measured",
+      "note": "±$5,196. Roughly 50% above the U.S. median; Indiana's wealthiest county."
+    },
+    "medianHomeValue": {
+      "key": "medianHomeValue",
+      "label": "Median home value",
+      "value": 437400,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 1-year (2024) via Census Reporter",
+      "sourceUrl": "http://censusreporter.org/profiles/05000US18057-hamilton-county-in/",
+      "year": 2024,
+      "quality": "measured",
+      "note": "±$13,790, owner-occupied units."
+    }
+  },
+  "pillars": [
+    {
+      "key": "movement",
+      "label": "Movement",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "bridgePoorPct",
+          "label": "Bridges in poor condition",
+          "value": 3.0,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA National Bridge Inventory (modeled from Indiana 5.3% structurally deficient, adjusted for Hamilton County's newer, better-funded inventory)",
+          "sourceUrl": "https://artbabridgereport.org/state/profile/IN",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Indiana statewide is 5.3% structurally deficient; Hamilton County's bridges are newer and better maintained, so estimated below the state figure."
+        },
+        {
+          "key": "pavementPoorPct",
+          "label": "Roads in poor ride quality",
+          "value": 7.0,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA HPMS / INDOT (modeled; affluent, recently built suburban network)",
+          "sourceUrl": "https://www.fhwa.dot.gov/policyinformation/hpms.cfm",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Estimated low given the county's newer road stock and high local capital spending on streets."
+        },
+        {
+          "key": "roundaboutRatio",
+          "label": "Roundabout ratio",
+          "value": 0.42,
+          "unit": "ratio",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap / City of Carmel (Carmel alone: 160+ roundabouts vs ~10 signals; countywide blended with Fishers, Westfield, Noblesville)",
+          "sourceUrl": "https://www.carmel.in.gov/311/Roundabouts",
+          "year": 2025,
+          "quality": "field",
+          "note": "Carmel is the roundabout capital of the U.S. with 160+ roundabouts and only about a dozen signalized intersections (Carmel-only ratio approaches 0.9). Blended countywide with less-converted municipalities yields ~0.42, still far above the 0.30 'strong' anchor."
+        },
+        {
+          "key": "trafficDeathsPer100k",
+          "label": "Traffic deaths",
+          "value": 7.0,
+          "unit": "per 100k",
+          "direction": "lowerBetter",
+          "source": "NHTSA FARS / County Health Rankings (modeled)",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/hamilton",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Hamilton County reported ~7.0 motor-vehicle crash deaths per 100k; roundabout conversion has sharply cut injury-crash severity."
+        },
+        {
+          "key": "sidewalkCoverage",
+          "label": "Sidewalk coverage",
+          "value": 0.75,
+          "unit": "km/km",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap (partial mapped sidewalk-km per road-km; field-confirmed high coverage)",
+          "sourceUrl": "https://www.openstreetmap.org/relation/136386",
+          "year": 2024,
+          "quality": "partial",
+          "note": "Strong sidewalk and multi-use-path coverage; Monon Trail and extensive path network. OSM coverage is incomplete so this is a conservative partial estimate."
+        }
+      ]
+    },
+    {
+      "key": "publicRealm",
+      "label": "Public Realm",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "parkAcresPer1k",
+          "label": "Park acres per 1,000 residents",
+          "value": 12.0,
+          "unit": "acres/1k",
+          "direction": "higherBetter",
+          "source": "Trust for Public Land / local parks depts (modeled from Carmel 500+ acres, Westfield Grand Park 400+ acres, Fishers and county parks)",
+          "sourceUrl": "https://www.carmel.in.gov/437/Parks-Recreation",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Carmel alone has 500+ park acres; Westfield's Grand Park adds 400+ acres; substantial Fishers and county holdings. Blended estimate near the national median but with exceptional quality."
+        },
+        {
+          "key": "parkAccessPct",
+          "label": "Residents within a 10-min walk of a park",
+          "value": 62.0,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "TPL ParkServe (modeled for suburban form)",
+          "sourceUrl": "https://parkserve.tpl.org/mapping/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Dense park network in Carmel/Fishers cores raises walkable access above typical suburbs, though lower-density areas pull the county figure down from urban norms."
+        },
+        {
+          "key": "playgroundScore",
+          "label": "Playground quality",
+          "value": 90,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "Field survey (surface, equipment age, upkeep)",
+          "sourceUrl": "https://www.carmel.in.gov/437/Parks-Recreation",
+          "year": 2025,
+          "quality": "field",
+          "note": "Modern, well-maintained playgrounds with recent equipment and safety surfacing across Carmel, Fishers, and Westfield."
+        },
+        {
+          "key": "libraryVisitsPerCapita",
+          "label": "Library visits per capita",
+          "value": 4.5,
+          "unit": "per capita",
+          "direction": "higherBetter",
+          "source": "IMLS / Indiana State Library Public Library Statistics (Carmel Clay 5.86/1k-res-weighted; Hamilton East 3.31)",
+          "sourceUrl": "https://www.in.gov/library/services-for-libraries/plstats/",
+          "year": 2023,
+          "quality": "measured",
+          "note": "Carmel Clay Public Library ~5.86 visits per resident and Hamilton East ~3.31; both rank in Indiana's top 8 systems. County-blended ~4.5, well above the IMLS national median (~3.3)."
+        },
+        {
+          "key": "treeCanopyPct",
+          "label": "Tree canopy",
+          "value": 30.0,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "USFS NLCD Tree Canopy Cover (modeled from Indiana urban canopy assessment)",
+          "sourceUrl": "https://www.in.gov/dnr/forestry/files/fo-FinalINUTCSummaryRep.pdf",
+          "year": 2021,
+          "quality": "modeled",
+          "note": "Mature established neighborhoods and strong municipal tree programs; estimated at ~30% for the developed county, higher in older Carmel/Noblesville tracts."
+        }
+      ]
+    },
+    {
+      "key": "education",
+      "label": "Education",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "learningRate",
+          "label": "Learning rate",
+          "value": 1.1,
+          "unit": "grade/yr",
+          "direction": "higherBetter",
+          "source": "SEDA (modeled from Carmel Clay / Hamilton Southeastern proficiency rates)",
+          "sourceUrl": "https://edopportunity.org/",
+          "year": 2019,
+          "quality": "modeled",
+          "note": "Carmel Clay ~72% math / 73% reading proficiency and top-of-state performance imply above-average learning growth (>1.0 grade level per year)."
+        },
+        {
+          "key": "gradeLevelsVsNational",
+          "label": "Grade levels vs national average",
+          "value": 1.8,
+          "unit": "grade levels",
+          "direction": "higherBetter",
+          "source": "SEDA (modeled)",
+          "sourceUrl": "https://edopportunity.org/",
+          "year": 2019,
+          "quality": "modeled",
+          "note": "Hamilton County's high-attainment, high-income districts (Carmel Clay, HSE, Zionsville-adjacent) test roughly 1.5-2 grade levels above the national mean."
+        },
+        {
+          "key": "attainmentBachelorsPct",
+          "label": "Bachelor's degree or higher (age 25+)",
+          "value": 62.7,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "Census ACS 1-year (2024) via Census Reporter",
+          "sourceUrl": "http://censusreporter.org/profiles/05000US18057-hamilton-county-in/",
+          "year": 2024,
+          "quality": "measured",
+          "note": "±2.3%. Roughly double the national rate; among the most-educated counties in the Midwest."
+        }
+      ]
+    },
+    {
+      "key": "healthSafety",
+      "label": "Health & Safety",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "lifeExpectancy",
+          "label": "Life expectancy",
+          "value": 81.0,
+          "unit": "years",
+          "direction": "higherBetter",
+          "source": "CDC/NCHS USALEEP / County Health Rankings",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/hamilton",
+          "year": 2023,
+          "quality": "measured",
+          "note": "Highest of any Indiana county; residents live ~7 years longer than neighboring Marion County."
+        },
+        {
+          "key": "childWellbeingIndex",
+          "label": "Child wellbeing",
+          "value": 90,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "Modeled from CDC PLACES / County Health Rankings child poverty (4.5%)",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/community-conditions/social-and-economic-factors/income-employment-and-wealth/children-in-poverty",
+          "year": 2025,
+          "quality": "modeled",
+          "note": "Only ~4.5% of children in poverty (among the lowest in Indiana), strong schools and health access; composite modeled near the top of the scale."
+        },
+        {
+          "key": "violentCrimePer1k",
+          "label": "Violent crime",
+          "value": 1.0,
+          "unit": "per 1k",
+          "direction": "lowerBetter",
+          "source": "FBI Crime Data Explorer (modeled; ~10.3 per 100k reported)",
+          "sourceUrl": "https://cde.ucr.cjis.gov/",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Reported violent-crime rate ~10.3 per 100k (about 1.0 per 1,000), less than half the national average of ~22.7 per 100k."
+        }
+      ]
+    },
+    {
+      "key": "systems",
+      "label": "Systems",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "waterViolationPoints",
+          "label": "Drinking-water violations",
+          "value": 0.0,
+          "unit": "0-10",
+          "direction": "lowerBetter",
+          "source": "EPA SDWIS (modeled; large well-run public utilities, Citizens Energy / Carmel Utilities)",
+          "sourceUrl": "https://enviro.epa.gov/envirofacts/sdwis/search",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Served by large, well-capitalized systems with no known significant health-based violations; estimated clean."
+        },
+        {
+          "key": "broadbandCoveragePct",
+          "label": "Broadband 100/20 Mbps availability",
+          "value": 99.0,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC Broadband Data Collection (modeled from provider coverage)",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Dense suburban market with Spectrum, AT&T fiber, and fixed wireless covering ~99% of homes."
+        },
+        {
+          "key": "broadbandGigabitPct",
+          "label": "Gigabit availability",
+          "value": 90.0,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC Broadband Data Collection (modeled)",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Spectrum gigabit and multi-gig fiber build-outs across Carmel/Fishers; NineStar CONNECT offers up to 10 Gbps in parts of the county."
+        }
+      ]
+    },
+    {
+      "key": "civicFabric",
+      "label": "Civic Fabric",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "historicRegisterPer10k",
+          "label": "Historic Register listings per 10,000 residents",
+          "value": 0.5,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "National Register of Historic Places (modeled; historic Noblesville square, Cicero, older districts against large modern population)",
+          "sourceUrl": "https://npgallery.nps.gov/NRHP/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "A modest count of Register listings (Noblesville courthouse square, older townships) spread across a fast-grown suburban population of ~380k yields a low per-capita figure."
+        },
+        {
+          "key": "culturalVenuesPer10k",
+          "label": "Cultural venues per 10,000 residents",
+          "value": 1.2,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "IMLS Museum Universe / local (modeled; Palladium, Booth Tarkington Civic Theatre, Arts & Design District galleries, Nickel Plate District)",
+          "sourceUrl": "https://www.imls.gov/research-evaluation/data-collection/museum-universe-data-file",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Rich venue density for a suburb: the Palladium / Center for the Performing Arts, Carmel Arts & Design District, Nickel Plate District amphitheater, and numerous galleries and theaters."
+        },
+        {
+          "key": "townCenterScore",
+          "label": "Town center quality",
+          "value": 92,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "Field assessment (walkable town-center existence and quality)",
+          "sourceUrl": "https://www.carmel.in.gov/",
+          "year": 2025,
+          "quality": "field",
+          "note": "Exceptional purpose-built walkable centers: Carmel City Center/Midtown and the Arts & Design District, Fishers' Nickel Plate District, and Noblesville's historic square."
+        }
+      ]
+    },
+    {
+      "key": "stewardship",
+      "label": "Stewardship",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "realCapitalOutlayPerCapita",
+          "label": "Annual capital outlay per resident",
+          "value": 900,
+          "unit": "$/capita/yr",
+          "direction": "higherBetter",
+          "source": "Census of Governments / local ACFRs (modeled from Carmel, Fishers, Westfield capital programs)",
+          "sourceUrl": "https://www.carmel.in.gov/government/departments-services/finance",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Sustained high capital spend on roundabouts, trails, the Palladium, City Center, and Grand Park; per-capita outlay estimated well above the suburban norm."
+        },
+        {
+          "key": "capitalAssetsPerCapita",
+          "label": "Net capital assets per resident",
+          "value": 12000,
+          "unit": "$/capita",
+          "direction": "higherBetter",
+          "source": "Local ACFRs (modeled; net governmental capital assets across Carmel/Fishers/Westfield/county)",
+          "sourceUrl": "https://www.carmel.in.gov/government/departments-services/finance",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Large accumulated public infrastructure stock (roads, roundabouts, trails, arts and rec facilities) relative to population; estimated from municipal balance sheets."
+        },
+        {
+          "key": "investmentTrendScore",
+          "label": "Investment trend",
+          "value": 95,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "Field assessment (is the place actively investing now?)",
+          "sourceUrl": "https://www.carmel.in.gov/",
+          "year": 2025,
+          "quality": "field",
+          "note": "Actively building: ongoing roundabout program, Monon expansion, Midtown/Proscenium development, Fishers district growth, Westfield Grand Park. Among the most actively investing communities in the country."
+        }
+      ]
+    }
+  ]
+}

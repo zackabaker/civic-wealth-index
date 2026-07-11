@@ -1,0 +1,391 @@
+{
+  "fips": "08097",
+  "slug": "pitkin-county-co",
+  "name": "Pitkin County",
+  "state": "CO",
+  "stateName": "Colorado",
+  "kind": "county",
+  "metro": "Glenwood Springs micro / Roaring Fork Valley",
+  "seat": "Aspen",
+  "keyPlaces": ["Aspen", "Snowmass Village", "Basalt", "Woody Creek"],
+  "population": 16985,
+  "populationYear": 2024,
+  "fieldSurveyed": false,
+  "privateWealth": {
+    "medianHouseholdIncome": {
+      "key": "medianHouseholdIncome",
+      "label": "Median household income",
+      "value": 102645,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 5-year (via Data USA)",
+      "sourceUrl": "https://datausa.io/profile/geo/pitkin-county-co",
+      "year": 2024,
+      "quality": "measured",
+      "note": "ACS wage-and-salary income badly understates true wealth in Pitkin County. Much of the local economy is non-wage (capital gains, investment income, second-home ownership), and a large share of the county's real estate is owned by part-time or non-resident owners who are not captured in the resident household-income figure. Median home value (>$1.1M) and property-based wealth are far more indicative of the actual private wealth concentrated here."
+    },
+    "medianHomeValue": {
+      "key": "medianHomeValue",
+      "label": "Median home value",
+      "value": 1140000,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 5-year (via Data USA)",
+      "sourceUrl": "https://datausa.io/profile/geo/pitkin-county-co",
+      "year": 2024,
+      "quality": "measured",
+      "note": "Among the highest median home values in the United States. ACS 2019-2023 five-year estimate placed the median at ~$1.13M; the resort/second-home market pushes true transaction prices well above this."
+    }
+  },
+  "pillars": [
+    {
+      "key": "movement",
+      "label": "Movement",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "bridgePoorPct",
+          "label": "Bridges in poor condition",
+          "value": 2.5,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA National Bridge Inventory (modeled from CO state average)",
+          "sourceUrl": "https://www.fhwa.dot.gov/bridge/nbi.cfm",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Pitkin County has only a small number of NBI-inventoried bridges; the per-bridge share is volatile. Colorado's statewide poor-bridge share is roughly 5%, and mountain-resort counties with well-funded public works typically run below the state average. Modeled at ~2.5%."
+        },
+        {
+          "key": "pavementPoorPct",
+          "label": "Roads in poor ride quality",
+          "value": 8,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA HPMS / CDOT (modeled)",
+          "sourceUrl": "https://www.fhwa.dot.gov/policyinformation/hpms.cfm",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled. Well-funded local road maintenance (high property-tax base, active public works) and a compact road network suggest below-average poor pavement, though high-elevation freeze-thaw cycles add wear. Estimated ~8%."
+        },
+        {
+          "key": "roundaboutRatio",
+          "label": "Roundabout ratio",
+          "value": 0.12,
+          "unit": "ratio",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap Overpass (modeled)",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1411331",
+          "year": 2025,
+          "quality": "modeled",
+          "note": "Aspen and the Highway 82 corridor include several prominent roundabouts (notably the SH-82/Maroon Creek roundabout) relative to a small number of signalized intersections. Modeled ratio ~0.12."
+        },
+        {
+          "key": "trafficDeathsPer100k",
+          "label": "Traffic deaths per 100k",
+          "value": 6,
+          "unit": "per 100k",
+          "direction": "lowerBetter",
+          "source": "NHTSA FARS / County Health Rankings (modeled)",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/colorado/pitkin",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Small population makes the annual rate highly volatile (few deaths per year). Modeled well below the Colorado and national averages given low speeds in the core, strong transit share, and low DUI-corridor exposure; estimated ~6 per 100k."
+        },
+        {
+          "key": "sidewalkCoverage",
+          "label": "Sidewalk coverage",
+          "value": 0.45,
+          "unit": "km/km",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap (partial)",
+          "sourceUrl": "https://www.openstreetmap.org/relation/1411331",
+          "year": 2025,
+          "quality": "partial",
+          "note": "OSM sidewalk mapping is incomplete. Aspen's walkable historic core has near-complete sidewalks, but the county's large rural/mountain road mileage has little to none, so the county-wide ratio is dragged down. Partial estimate ~0.45 km sidewalk per km road."
+        }
+      ]
+    },
+    {
+      "key": "publicRealm",
+      "label": "Public Realm",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "parkAcresPer1k",
+          "label": "Park acres per 1,000",
+          "value": 65,
+          "unit": "acres/1k",
+          "direction": "higherBetter",
+          "source": "Pitkin County Open Space & Trails / City of Aspen Parks (modeled)",
+          "sourceUrl": "https://pitkincounty.com/443/Open-Space-Trails",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Pitkin County Open Space & Trails conserves ~30,000 acres and the City of Aspen holds ~1,100 acres of open space; much of the ~30,000 acres is conservation easement rather than developed park. Counting accessible parks/open space (not easements) against ~17k residents yields an exceptionally high per-1k figure; conservatively modeled at ~65 acres/1k. If all conserved open space were counted, the figure would be far higher (>1,800/1k)."
+        },
+        {
+          "key": "parkAccessPct",
+          "label": "Residents within a 10-min walk of a park",
+          "value": 85,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "TPL ParkServe (modeled)",
+          "sourceUrl": "https://www.tpl.org/park-data",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Aspen's compact, walkable core and dense trail/open-space network put most in-town residents within a 10-minute walk of a park or trailhead. Modeled ~85%; some outlying rural residents lower the county-wide share."
+        },
+        {
+          "key": "playgroundScore",
+          "label": "Playground quality",
+          "value": 82,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "modeled (not field-surveyed)",
+          "sourceUrl": "https://www.aspenrecreation.com/parks-trails",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Not field-surveyed by our team. Modeled high given Aspen's well-funded parks system (Rio Grande Park, Wagner Park, Iselin Park facilities), strong maintenance budgets, and recent recreation investment."
+        },
+        {
+          "key": "libraryVisitsPerCapita",
+          "label": "Library visits per capita",
+          "value": 8.5,
+          "unit": "per capita",
+          "direction": "higherBetter",
+          "source": "IMLS Public Libraries Survey (modeled from circulation)",
+          "sourceUrl": "https://pitcolib.org/",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Pitkin County Library (Aspen) circulates ~236,754 items/year to a legal service population of ~12,980 (~18 items/capita), a very high figure. Visits per capita are modeled at ~8.5 based on typical visit-to-circulation ratios for an active central library; the true figure is likely higher given the library's role as a civic hub."
+        },
+        {
+          "key": "treeCanopyPct",
+          "label": "Tree canopy",
+          "value": 30,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "USFS Tree Canopy / NLCD (modeled)",
+          "sourceUrl": "https://data.fs.usda.gov/geodata/rastergateway/treecanopycover/",
+          "year": 2021,
+          "quality": "modeled",
+          "note": "County-wide canopy is complex: extensive montane forest (spruce-fir, aspen, lodgepole) on lower slopes but large areas above treeline and alpine tundra with no canopy. Modeled county-wide effective canopy ~30%; the developed Aspen core has substantial mature street-tree canopy."
+        }
+      ]
+    },
+    {
+      "key": "education",
+      "label": "Education",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "learningRate",
+          "label": "Learning rate",
+          "value": 1.05,
+          "unit": "grade/yr",
+          "direction": "higherBetter",
+          "source": "SEDA (modeled)",
+          "sourceUrl": "https://edopportunity.org/",
+          "year": 2019,
+          "quality": "modeled",
+          "note": "SEDA figure for Aspen School District No. 1 not directly retrieved. Modeled slightly above the national rate (~1.05 grade/yr) consistent with a small, high-resource, high-attainment district."
+        },
+        {
+          "key": "gradeLevelsVsNational",
+          "label": "Grade levels vs. national",
+          "value": 1.8,
+          "unit": "grade levels",
+          "direction": "higherBetter",
+          "source": "SEDA (modeled)",
+          "sourceUrl": "https://edopportunity.org/",
+          "year": 2019,
+          "quality": "modeled",
+          "note": "Modeled from Aspen's strong CMAS/US News performance and very high adult educational attainment. Aspen School District students test well above national means; modeled at ~1.8 grade levels above the national average."
+        },
+        {
+          "key": "attainmentBachelorsPct",
+          "label": "Bachelor's degree or higher (age 25+)",
+          "value": 62.8,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "Census ACS / QuickFacts",
+          "sourceUrl": "https://www.census.gov/quickfacts/fact/table/pitkincountycolorado",
+          "year": 2023,
+          "quality": "measured",
+          "note": "62.8% of adults 25+ hold a bachelor's degree or higher — among the highest in Colorado (state ~45.7%, US ~35.7%)."
+        }
+      ]
+    },
+    {
+      "key": "healthSafety",
+      "label": "Health & Safety",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "lifeExpectancy",
+          "label": "Life expectancy",
+          "value": 86.8,
+          "unit": "years",
+          "direction": "higherBetter",
+          "source": "CDC/NCHS / County Health Rankings / US News Healthiest Communities",
+          "sourceUrl": "https://www.usnews.com/news/healthiest-communities/colorado/pitkin-county",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Pitkin County consistently ranks among the top US counties for longevity. Reported figures range from ~86-87 years (CDC/CHR long-run) up to ~92.7 in some 2024 rankings. Modeled conservatively at ~86.8 years."
+        },
+        {
+          "key": "childWellbeingIndex",
+          "label": "Child well-being index",
+          "value": 82,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "modeled from CDC PLACES / KIDS COUNT",
+          "sourceUrl": "https://www.cdc.gov/places/",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled high given very low poverty (~7%), high income, strong schools, and excellent health outcomes; tempered by extreme housing costs that strain working families with children."
+        },
+        {
+          "key": "violentCrimePer1k",
+          "label": "Violent crime per 1,000",
+          "value": 1.8,
+          "unit": "per 1k",
+          "direction": "lowerBetter",
+          "source": "FBI Crime Data Explorer (modeled)",
+          "sourceUrl": "https://cde.ucr.cjis.gov/",
+          "year": 2022,
+          "quality": "modeled",
+          "note": "Aggregator sites report inflated rates (~10.9/1k at CrimeGrade) driven by a tiny population base and daytime/tourist population that swells the denominator problem in reverse. Actual FBI-reported violent incidents are few; modeled at ~1.8 per 1,000 residents, near or below the Colorado average once the transient population is accounted for. High volatility due to small counts."
+        }
+      ]
+    },
+    {
+      "key": "systems",
+      "label": "Systems",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "waterViolationPoints",
+          "label": "Drinking-water violation severity",
+          "value": 1,
+          "unit": "0-10",
+          "direction": "lowerBetter",
+          "source": "EPA SDWIS",
+          "sourceUrl": "https://enviro.epa.gov/facts/sdwis/search.html",
+          "year": 2025,
+          "quality": "modeled",
+          "note": "City of Aspen (PWS ID CO0149122) sources most water from federally designated wilderness (Castle and Maroon creeks) and was in compliance with health-based standards in the EPA quarter Apr-Jun 2024. A minor 2025 Total Organic Carbon sampling/monitoring violation (procedural, not health-based, no alternate source needed) was recorded. Scored low severity (~1)."
+        },
+        {
+          "key": "broadbandCoveragePct",
+          "label": "Broadband 100/20 availability",
+          "value": 97,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC Broadband Data Collection (modeled)",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2025,
+          "quality": "modeled",
+          "note": "Aspen and Snowmass have strong wireline/cable service; the developed corridors are well covered at 100/20. Modeled ~97%, with sparse mountain/rural parcels the main gap."
+        },
+        {
+          "key": "broadbandGigabitPct",
+          "label": "Gigabit availability",
+          "value": 88,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC BDC (modeled)",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2025,
+          "quality": "modeled",
+          "note": "Cable (DOCSIS 3.1) and expanding fiber in Aspen/Snowmass support gigabit for most developed addresses. Modeled ~88%."
+        }
+      ]
+    },
+    {
+      "key": "civicFabric",
+      "label": "Civic Fabric",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "historicRegisterPer10k",
+          "label": "Historic Register listings per 10k",
+          "value": 22.4,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "National Register of Historic Places",
+          "sourceUrl": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_Pitkin_County,_Colorado",
+          "year": 2025,
+          "quality": "measured",
+          "note": "38 NRHP-listed properties and districts in Pitkin County (silver-mining-era Aspen has a dense historic core). 38 / 16,985 residents = ~22.4 per 10,000 — very high, amplified by the tiny population."
+        },
+        {
+          "key": "culturalVenuesPer10k",
+          "label": "Cultural venues per 10k",
+          "value": 7.1,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "IMLS Museum Universe / local (modeled)",
+          "sourceUrl": "https://aspenchamber.org/explore/arts-culture/museums-centers/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Aspen hosts an outsized concentration of cultural institutions for its size: Aspen Art Museum, Wheeler Opera House, Aspen Music Festival & School, Aspen Institute / Resnick Center, Aspen Historical Society (Wheeler-Stallard Museum, Holden/Marolt), Red Brick Center for the Arts, Isis Theatre, Belly Up, and numerous galleries. Counting ~12 significant venues against ~17k residents yields ~7.1 per 10,000 — one of the highest ratios in the nation, driven by the tiny resident population against a global-tier cultural economy."
+        },
+        {
+          "key": "townCenterScore",
+          "label": "Town center quality",
+          "value": 95,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "assessed (not field-surveyed)",
+          "sourceUrl": "https://aspenchamber.org/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Not field-surveyed by our team. Aspen has an exceptional, intact, walkable historic downtown core (Victorian-era grid, pedestrian malls, mixed retail/dining/culture). Assessed near the top of the scale (~95)."
+        }
+      ]
+    },
+    {
+      "key": "stewardship",
+      "label": "Stewardship",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "realCapitalOutlayPerCapita",
+          "label": "Capital outlay per capita",
+          "value": 2409,
+          "unit": "$/capita/yr",
+          "direction": "higherBetter",
+          "source": "Pitkin County 2024 budget (proposed capital expenditures)",
+          "sourceUrl": "https://www.aspentimes.com/news/with-sales-tax-revenue-and-grant-money-to-spend-pitkin-county-proposes-major-capital-project-expenditures-in-2024/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Pitkin County's 2024 budget proposed ~$40.9M in capital expenditures (jail design, deed-restricted housing acquisition, airport/landfill infrastructure, clean-energy microgrid). ~$40.9M / 16,985 residents ≈ $2,409/capita — extraordinarily high, reflecting a wealthy tax base and active investment. Single-year figure; capital outlay is lumpy year to year."
+        },
+        {
+          "key": "capitalAssetsPerCapita",
+          "label": "Net capital assets per capita",
+          "value": 18000,
+          "unit": "$/capita",
+          "direction": "higherBetter",
+          "source": "Pitkin County ACFR (modeled)",
+          "sourceUrl": "https://pitkincounty.com/Archive/ViewFile/Item/565",
+          "year": 2022,
+          "quality": "modeled",
+          "note": "Modeled from Pitkin County ACFR net-position data (total net position exceeded liabilities by ~$302M in an earlier year, with governmental capital assets a large share and growing). Net governmental capital assets per resident modeled conservatively at ~$18,000/capita; the county owns extensive facilities, open space, and airport assets relative to its small population."
+        },
+        {
+          "key": "investmentTrendScore",
+          "label": "Investment trend",
+          "value": 88,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "assessed",
+          "sourceUrl": "https://www.aspentimes.com/news/pitkin-county-proposes-311-million-budget-for-2026/",
+          "year": 2026,
+          "quality": "modeled",
+          "note": "Assessed high. The county is actively investing: budgets have grown sharply (2024 all-funds ~$216M, 2026 proposed ~$311M) with major capital in housing, energy, transit, and open space. Reflects a place converting private wealth into ongoing public investment."
+        }
+      ]
+    }
+  ]
+}

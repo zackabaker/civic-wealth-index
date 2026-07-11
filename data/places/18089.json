@@ -1,0 +1,391 @@
+{
+  "fips": "18089",
+  "slug": "lake-county-in",
+  "name": "Lake County",
+  "state": "IN",
+  "stateName": "Indiana",
+  "kind": "county",
+  "metro": "Chicago metro (Northwest Indiana)",
+  "seat": "Crown Point",
+  "keyPlaces": ["Gary", "Hammond", "East Chicago", "Merrillville", "Crown Point", "Munster", "Schererville", "St. John", "Dyer"],
+  "population": 495000,
+  "populationYear": 2023,
+  "fieldSurveyed": false,
+  "privateWealth": {
+    "medianHouseholdIncome": {
+      "key": "medianHouseholdIncome",
+      "label": "Median household income",
+      "value": 68985,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 5-year (via Data USA / Census Reporter)",
+      "sourceUrl": "https://datausa.io/profile/geo/lake-county-in",
+      "year": 2023,
+      "quality": "measured",
+      "note": "County-wide figure blends struggling post-industrial cities (Gary, East Chicago) with affluent suburbs (St. John, Munster, Schererville), so the median masks a wide internal spread."
+    },
+    "medianHomeValue": {
+      "key": "medianHomeValue",
+      "label": "Median home value",
+      "value": 214700,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 5-year (via Data USA)",
+      "sourceUrl": "https://datausa.io/profile/geo/lake-county-in",
+      "year": 2023,
+      "quality": "measured",
+      "note": "County median owner-occupied value; suburban towns run far above it while values in parts of Gary and East Chicago are a fraction of the county figure."
+    }
+  },
+  "pillars": [
+    {
+      "key": "movement",
+      "label": "Movement",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "bridgePoorPct",
+          "label": "Bridges in poor condition",
+          "value": 7.5,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA National Bridge Inventory / ARTBA (Indiana profile)",
+          "sourceUrl": "https://artbabridgereport.org/state/profile/IN",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Indiana statewide is ~5.3% structurally deficient; Lake County's older industrial spans, heavy truck traffic and deferred maintenance in Gary/East Chicago push the county estimate above the state rate."
+        },
+        {
+          "key": "pavementPoorPct",
+          "label": "Roads in poor ride quality",
+          "value": 22,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA HPMS / INDOT (modeled)",
+          "sourceUrl": "https://www.fhwa.dot.gov/policyinformation/hpms.cfm",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Reflects aging local street networks in the northern industrial cities alongside better-maintained suburban arterials; county-wide blend estimated above the Indiana average."
+        },
+        {
+          "key": "roundaboutRatio",
+          "label": "Roundabout ratio",
+          "value": 0.02,
+          "unit": "ratio",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap Overpass (modeled)",
+          "sourceUrl": "https://overpass-turbo.eu/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Lake County's grid is signal-dominated; very few roundabouts, unlike Indiana's Hamilton County. Estimated from regional OSM density."
+        },
+        {
+          "key": "trafficDeathsPer100k",
+          "label": "Traffic deaths",
+          "value": 12.5,
+          "unit": "per 100k",
+          "direction": "lowerBetter",
+          "source": "NHTSA FARS / County Health Rankings (modeled)",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/lake",
+          "year": 2022,
+          "quality": "modeled",
+          "note": "Near the Indiana county average; heavy interstate freight corridors (I-80/94, I-65, I-90) elevate exposure."
+        },
+        {
+          "key": "sidewalkCoverage",
+          "label": "Sidewalk coverage",
+          "value": 0.35,
+          "unit": "km/km",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap (partial mapping)",
+          "sourceUrl": "https://www.openstreetmap.org/relation/247165",
+          "year": 2024,
+          "quality": "partial",
+          "note": "Dense older cities (Hammond, Gary core, East Chicago) retain legacy sidewalk grids; postwar suburbs are patchier. OSM sidewalk mapping is incomplete, so this understates true coverage."
+        }
+      ]
+    },
+    {
+      "key": "publicRealm",
+      "label": "Public Realm",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "parkAcresPer1k",
+          "label": "Park acres per 1,000 residents",
+          "value": 11,
+          "unit": "acres/1k",
+          "direction": "higherBetter",
+          "source": "Trust for Public Land / PAD-US / local parks (modeled)",
+          "sourceUrl": "https://www.tpl.org/park-data",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Lakefront and dunes access (Indiana Dunes NP and state parks lie just east in Porter/LaPorte) plus county and municipal parks give a moderate figure, though maintenance in the older cities is uneven."
+        },
+        {
+          "key": "parkAccessPct",
+          "label": "Residents within a 10-min walk of a park",
+          "value": 55,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "TPL ParkServe (modeled)",
+          "sourceUrl": "https://www.tpl.org/parkserve",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Higher in the compact older cities, lower across low-density suburban tracts; county-wide blend estimated near the U.S. average."
+        },
+        {
+          "key": "playgroundScore",
+          "label": "Playground quality",
+          "value": 45,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "modeled (surface, equipment age, upkeep)",
+          "sourceUrl": "https://www.tpl.org/parkserve",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Suburban parks are newer and well-kept; playgrounds in disinvested Gary/East Chicago neighborhoods show aging equipment and deferred maintenance, pulling the county blend down."
+        },
+        {
+          "key": "libraryVisitsPerCapita",
+          "label": "Library visits per capita",
+          "value": 2.6,
+          "unit": "per capita",
+          "direction": "higherBetter",
+          "source": "IMLS Public Libraries Survey (modeled)",
+          "sourceUrl": "https://www.imls.gov/research-evaluation/data-collection/public-libraries-survey",
+          "year": 2022,
+          "quality": "modeled",
+          "note": "Lake County has a strong library tradition (Lake County Public Library is Indiana's 3rd largest, plus several independent municipal districts). Estimated near the Indiana average."
+        },
+        {
+          "key": "treeCanopyPct",
+          "label": "Tree canopy",
+          "value": 26,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "USFS Tree Canopy / NLCD (modeled)",
+          "sourceUrl": "https://www.mrlc.gov/data",
+          "year": 2021,
+          "quality": "modeled",
+          "note": "Suburban and residential canopy is decent, but the heavily industrialized lakefront corridor (steel mills, refineries, rail) holds large low-canopy areas that lower the county average."
+        }
+      ]
+    },
+    {
+      "key": "education",
+      "label": "Education",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "learningRate",
+          "label": "Learning rate",
+          "value": 0.95,
+          "unit": "grade/yr",
+          "direction": "higherBetter",
+          "source": "SEDA (Stanford Education Data Archive, modeled)",
+          "sourceUrl": "https://edopportunity.org/",
+          "year": 2019,
+          "quality": "modeled",
+          "note": "County blend: strong suburban districts (Munster, Crown Point, Lake Central) near or above one grade/year offset weaker growth in high-poverty urban districts (Gary, East Chicago)."
+        },
+        {
+          "key": "gradeLevelsVsNational",
+          "label": "Grade levels vs. national average",
+          "value": -0.8,
+          "unit": "grade levels",
+          "direction": "higherBetter",
+          "source": "SEDA (modeled)",
+          "sourceUrl": "https://edopportunity.org/",
+          "year": 2019,
+          "quality": "modeled",
+          "note": "County-wide average sits below the national mean, dragged by low-income urban districts even as affluent suburban schools test above the national average."
+        },
+        {
+          "key": "attainmentBachelorsPct",
+          "label": "Bachelor's degree or higher (age 25+)",
+          "value": 28.4,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "Census ACS 5-year (via Census Reporter)",
+          "sourceUrl": "http://censusreporter.org/profiles/05000US18089-lake-county-in/",
+          "year": 2023,
+          "quality": "measured",
+          "note": "Roughly 90% of Indiana's statewide attainment rate; higher in the suburbs, markedly lower in the older industrial cities."
+        }
+      ]
+    },
+    {
+      "key": "healthSafety",
+      "label": "Health & Safety",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "lifeExpectancy",
+          "label": "Life expectancy",
+          "value": 74.3,
+          "unit": "years",
+          "direction": "higherBetter",
+          "source": "County Health Rankings / CDC-NCHS USALEEP",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/lake",
+          "year": 2024,
+          "quality": "measured",
+          "note": "Roughly 3-4 years below the national average; Lake County ranks around 50th of Indiana's 92 counties on health outcomes, with far shorter life expectancy in the disinvested urban core than in the suburbs."
+        },
+        {
+          "key": "childWellbeingIndex",
+          "label": "Child wellbeing index",
+          "value": 42,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "modeled from CDC PLACES / KIDS COUNT",
+          "sourceUrl": "https://datacenter.aecf.org/",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "High child-poverty concentrations in Gary and East Chicago (compounded by lead exposure) pull the county index below average despite better outcomes in suburban towns."
+        },
+        {
+          "key": "violentCrimePer1k",
+          "label": "Violent crime",
+          "value": 5.0,
+          "unit": "per 1k",
+          "direction": "lowerBetter",
+          "source": "FBI Crime Data Explorer (modeled county blend)",
+          "sourceUrl": "https://cde.ucr.cjis.gov/",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Gary's violent-crime rate is very high (~9 per 1,000), but county-wide the rate is much lower because most residents live in safe suburbs; this figure is a population-weighted county estimate."
+        }
+      ]
+    },
+    {
+      "key": "systems",
+      "label": "Systems",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "waterViolationPoints",
+          "label": "Drinking-water violation severity",
+          "value": 6,
+          "unit": "0-10",
+          "direction": "lowerBetter",
+          "source": "EPA SDWIS / IDEM (modeled)",
+          "sourceUrl": "https://www.epa.gov/enviro/sdwis-search",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Serious legacy lead problem: an estimated two-thirds of Indiana's ~55,000 lead service lines (~36,000) are in Northwest Indiana; Gary is replacing ~4,000 lines and East Chicago has ~3,400 remaining lead lines around a Superfund site. Suburban systems are far cleaner, so the county blend is elevated but not maximal."
+        },
+        {
+          "key": "broadbandCoveragePct",
+          "label": "Broadband availability (100/20 Mbps)",
+          "value": 98,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC Broadband Data Collection",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "As a mostly urbanized county, cable and fixed-wireless coverage (fixed wireless alone ~98.8%) put nearly all residents within the 100/20 tier; the gap here is affordability and adoption, not availability."
+        },
+        {
+          "key": "broadbandGigabitPct",
+          "label": "Gigabit availability",
+          "value": 40,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC Broadband Data Collection",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Fiber reaches ~43% of the county (5 residential fiber providers); gigabit-capable cable extends this in built-up areas, estimated ~40% overall."
+        }
+      ]
+    },
+    {
+      "key": "civicFabric",
+      "label": "Civic Fabric",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "historicRegisterPer10k",
+          "label": "National Register listings per 10,000 residents",
+          "value": 1.7,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "National Register of Historic Places",
+          "sourceUrl": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_Lake_County,_Indiana",
+          "year": 2024,
+          "quality": "measured",
+          "note": "~84 NRHP properties and districts (Lake County Courthouse, Marktown Historic District, Gary's planned-city districts like Horace Mann and Morningside). A genuine, deep historic fabric — much of it inherited from the industrial boom and now under-maintained."
+        },
+        {
+          "key": "culturalVenuesPer10k",
+          "label": "Cultural venues per 10,000 residents",
+          "value": 0.9,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "IMLS Museum Universe / local (modeled)",
+          "sourceUrl": "https://www.imls.gov/research-evaluation/data-collection/museum-data-files",
+          "year": 2022,
+          "quality": "modeled",
+          "note": "Includes theaters, museums and venues (e.g. Hard Rock Casino entertainment venue, county historical sites, the Genesis Convention Center legacy). Estimated near the small-metro average."
+        },
+        {
+          "key": "townCenterScore",
+          "label": "Walkable town center quality",
+          "value": 48,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "assessed (not field-surveyed)",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Crown_Point,_Indiana",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Wide internal spread: Crown Point's courthouse square and downtown Hammond/Whiting offer real walkable centers, while downtown Gary — once a full commercial core — is largely vacant. County blend is middling."
+        }
+      ]
+    },
+    {
+      "key": "stewardship",
+      "label": "Stewardship",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "realCapitalOutlayPerCapita",
+          "label": "Annual capital outlay per resident",
+          "value": 180,
+          "unit": "$/capita/yr",
+          "direction": "higherBetter",
+          "source": "Census of Governments / local ACFR (modeled)",
+          "sourceUrl": "https://www.census.gov/programs-surveys/gov-finances.html",
+          "year": 2022,
+          "quality": "modeled",
+          "note": "County-wide blend is modest: growing suburbs invest in new capital, but fiscally strained cities like Gary and East Chicago spend little on new capital relative to their large inherited asset base."
+        },
+        {
+          "key": "capitalAssetsPerCapita",
+          "label": "Net capital assets per resident",
+          "value": 6500,
+          "unit": "$/capita",
+          "direction": "higherBetter",
+          "source": "local ACFR (modeled)",
+          "sourceUrl": "https://www.lakecountyin.org/",
+          "year": 2022,
+          "quality": "modeled",
+          "note": "The classic inherited-capital story: cities like Gary hold large stocks of streets, water mains, schools and civic buildings built for a peak population they no longer have, and can no longer fully maintain — high book stock, falling real value."
+        },
+        {
+          "key": "investmentTrendScore",
+          "label": "Active investment trend",
+          "value": 38,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "assessed (not field-surveyed)",
+          "sourceUrl": "https://gary.capitalbnews.org/epa-lead-pipes-gary/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Mixed: real disinvestment and population loss in the industrial cities, partly offset by federally funded catch-up (lead-line replacement, brownfield remediation) and active growth/investment in the southern suburbs. Net trend is below average but not collapsing."
+        }
+      ]
+    }
+  ]
+}

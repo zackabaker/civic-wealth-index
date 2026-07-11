@@ -1,0 +1,389 @@
+{
+  "fips": "18003",
+  "slug": "allen-county-in",
+  "name": "Allen County",
+  "state": "IN",
+  "stateName": "Indiana",
+  "kind": "county",
+  "metro": "Fort Wayne metro",
+  "seat": "Fort Wayne",
+  "keyPlaces": ["Fort Wayne", "New Haven", "Grabill", "Woodburn"],
+  "population": 390000,
+  "populationYear": 2023,
+  "fieldSurveyed": false,
+  "privateWealth": {
+    "medianHouseholdIncome": {
+      "key": "medianHouseholdIncome",
+      "label": "Median household income",
+      "value": 68839,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 5-year",
+      "sourceUrl": "https://data.census.gov/table?q=median+household+income&g=050XX00US18003",
+      "year": 2023,
+      "quality": "measured"
+    },
+    "medianHomeValue": {
+      "key": "medianHomeValue",
+      "label": "Median home value",
+      "value": 194300,
+      "unit": "$",
+      "direction": "higherBetter",
+      "source": "Census ACS 5-year",
+      "sourceUrl": "https://data.census.gov/table?q=median+home+value&g=050XX00US18003",
+      "year": 2023,
+      "quality": "measured"
+    }
+  },
+  "pillars": [
+    {
+      "key": "movement",
+      "label": "Movement",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "bridgePoorPct",
+          "label": "Bridges in poor condition",
+          "value": 5.0,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA National Bridge Inventory / ARTBA Bridge Report",
+          "sourceUrl": "https://artbabridgereport.org/state/profile/IN",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Indiana statewide is 5.3% structurally deficient; Allen County appears in the top-traveled deficient list but county aggregate not published, so modeled at roughly the state rate."
+        },
+        {
+          "key": "pavementPoorPct",
+          "label": "Roads in poor condition",
+          "value": 18.0,
+          "unit": "%",
+          "direction": "lowerBetter",
+          "source": "FHWA HPMS / INDOT",
+          "sourceUrl": "https://www.fhwa.dot.gov/policyinformation/statistics.cfm",
+          "year": 2022,
+          "quality": "modeled",
+          "note": "Modeled from Indiana urban-area ride-quality norms; no county-specific HPMS share retrieved."
+        },
+        {
+          "key": "roundaboutRatio",
+          "label": "Roundabout ratio",
+          "value": 0.06,
+          "unit": "ratio",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap Overpass",
+          "sourceUrl": "https://overpass-turbo.eu/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Fort Wayne/Allen County has adopted some roundabouts but far fewer than Hamilton County; modeled low ratio pending Overpass query."
+        },
+        {
+          "key": "trafficDeathsPer100k",
+          "label": "Traffic deaths",
+          "value": 10.5,
+          "unit": "per 100k",
+          "direction": "lowerBetter",
+          "source": "NHTSA FARS / County Health Rankings",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/allen",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Allen County recorded 35 motor-vehicle deaths in 2024 (~9.0/100k on ~390k pop); modeled at ~10.5/100k to reflect a multi-year average, below the Indiana county median of ~15.8."
+        },
+        {
+          "key": "sidewalkCoverage",
+          "label": "Sidewalk coverage",
+          "value": 0.45,
+          "unit": "km/km",
+          "direction": "higherBetter",
+          "source": "OpenStreetMap",
+          "sourceUrl": "https://www.openstreetmap.org/relation/253846",
+          "year": 2024,
+          "quality": "partial",
+          "note": "Modeled/partial: dense sidewalk grid in Fort Wayne's urban core plus 160+ miles of trails, but sparse in suburban and rural Allen County."
+        }
+      ]
+    },
+    {
+      "key": "publicRealm",
+      "label": "Public Realm",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "parkAcresPer1k",
+          "label": "Park acres per 1,000 residents",
+          "value": 10.8,
+          "unit": "acres/1k",
+          "direction": "higherBetter",
+          "source": "Fort Wayne Parks & Recreation / Trust for Public Land",
+          "sourceUrl": "https://www.tpl.org/city/fort-wayne-indiana",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Fort Wayne Parks maintains ~2,840 acres across ~89 parks; adding Allen County / New Haven parkland against a ~390k county population yields roughly 10-11 acres/1k."
+        },
+        {
+          "key": "parkAccessPct",
+          "label": "Residents within a 10-min walk of a park",
+          "value": 62,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "Trust for Public Land ParkServe",
+          "sourceUrl": "https://www.tpl.org/city/fort-wayne-indiana",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Modeled from TPL ParkScore norms for mid-size Midwestern cities; strong core coverage, lower in outlying county."
+        },
+        {
+          "key": "playgroundScore",
+          "label": "Playground quality",
+          "value": 72,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "modeled from parks investment record",
+          "sourceUrl": "https://www.fortwayneparks.org/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Fort Wayne has recently added spraygrounds and modern playgrounds (Buckner, Robert E. Meyers Park at Harrison Square); modeled above average given active capital reinvestment."
+        },
+        {
+          "key": "libraryVisitsPerCapita",
+          "label": "Library visits per capita",
+          "value": 4.7,
+          "unit": "per capita",
+          "direction": "higherBetter",
+          "source": "IMLS Public Libraries Survey",
+          "sourceUrl": "https://www.imls.gov/research-evaluation/surveys/public-libraries-survey-pls",
+          "year": 2022,
+          "quality": "measured",
+          "note": "Allen County Public Library recorded 1,812,529 in-person visits against a legal service population of 385,410 (~4.7 per capita); ranks #2 in Indiana by annual visits."
+        },
+        {
+          "key": "treeCanopyPct",
+          "label": "Tree canopy",
+          "value": 23,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "Indiana DNR Urban Tree Canopy / USFS",
+          "sourceUrl": "https://www.in.gov/dnr/forestry/files/fo-FtWayneFactSheetFINAL.pdf",
+          "year": 2020,
+          "quality": "measured",
+          "note": "Fort Wayne's tree canopy declined from 29% to 23% over the last decade (urban development, storms, emerald ash borer); parks dept actively replanting."
+        }
+      ]
+    },
+    {
+      "key": "education",
+      "label": "Education",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "learningRate",
+          "label": "Learning rate",
+          "value": 1.0,
+          "unit": "grade/yr",
+          "direction": "higherBetter",
+          "source": "SEDA (Stanford Education Data Archive)",
+          "sourceUrl": "https://edopportunity.org/",
+          "year": 2019,
+          "quality": "modeled",
+          "note": "Allen County spans multiple districts; suburban NACS/SACS post strong gains while Fort Wayne Community Schools recover post-pandemic (leading state in reading growth). County-wide modeled near the national ~1.0 grade/yr."
+        },
+        {
+          "key": "gradeLevelsVsNational",
+          "label": "Grade levels vs. national average",
+          "value": -0.3,
+          "unit": "grade levels",
+          "direction": "higherBetter",
+          "source": "SEDA (Stanford Education Data Archive)",
+          "sourceUrl": "https://edopportunity.org/",
+          "year": 2019,
+          "quality": "modeled",
+          "note": "Modeled slightly below the national mean, reflecting a mix of high-performing suburban districts and a large urban district with lower proficiency (FWCS math/reading ~50-60% proficient)."
+        },
+        {
+          "key": "attainmentBachelorsPct",
+          "label": "Bachelor's degree or higher (age 25+)",
+          "value": 32.3,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "Census ACS",
+          "sourceUrl": "https://data.census.gov/table/ACSST1Y2023.S1501?g=050XX00US18003",
+          "year": 2023,
+          "quality": "measured",
+          "note": "ACS 2023 1-year: 32.3% of adults 25+ hold a bachelor's degree or higher."
+        }
+      ]
+    },
+    {
+      "key": "healthSafety",
+      "label": "Health & Safety",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "lifeExpectancy",
+          "label": "Life expectancy",
+          "value": 75.6,
+          "unit": "years",
+          "direction": "higherBetter",
+          "source": "County Health Rankings & Roadmaps",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/allen",
+          "year": 2025,
+          "quality": "measured",
+          "note": "Allen County life expectancy 75.6 years per County Health Rankings 2025."
+        },
+        {
+          "key": "childWellbeingIndex",
+          "label": "Child wellbeing index",
+          "value": 58,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "modeled from CDC PLACES / KIDS COUNT",
+          "sourceUrl": "https://www.countyhealthrankings.org/health-data/indiana/allen",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Modeled composite; Allen County carries elevated adult obesity (38%), smoking (19%), and overdose (34.8/100k) that weigh on child outcomes, offset by strong library/parks access."
+        },
+        {
+          "key": "violentCrimePer1k",
+          "label": "Violent crime",
+          "value": 2.7,
+          "unit": "per 1k",
+          "direction": "lowerBetter",
+          "source": "FBI Crime Data Explorer / UCR",
+          "sourceUrl": "https://cde.ucr.cjis.gov/",
+          "year": 2023,
+          "quality": "measured",
+          "note": "Fort Wayne reported 732 violent crimes in 2023, ~271/100k = ~2.7/1k; county-wide rate is somewhat lower given lower-crime suburban/rural areas."
+        }
+      ]
+    },
+    {
+      "key": "systems",
+      "label": "Systems",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "waterViolationPoints",
+          "label": "Drinking-water violation severity",
+          "value": 2,
+          "unit": "0-10",
+          "direction": "lowerBetter",
+          "source": "EPA SDWIS",
+          "sourceUrl": "https://sdwis.epa.gov/ords/sfdw_pub/r/sfdw/sdwis_fed_reports_public/103",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Fort Wayne City Utilities is a large surface-water system; a Lead and Copper Rule action-level exceedance has been reported, otherwise generally compliant with no detected PFAS. Modeled at 2 (minor)."
+        },
+        {
+          "key": "broadbandCoveragePct",
+          "label": "Broadband 100/20 Mbps availability",
+          "value": 97,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC Broadband Data Collection",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Xfinity cable reaches ~99% of Fort Wayne; county-wide 100/20 availability modeled at ~97% accounting for rural gaps."
+        },
+        {
+          "key": "broadbandGigabitPct",
+          "label": "Gigabit availability",
+          "value": 85,
+          "unit": "%",
+          "direction": "higherBetter",
+          "source": "FCC Broadband Data Collection",
+          "sourceUrl": "https://broadbandmap.fcc.gov/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Frontier fiber (up to 7 Gbps) and Xfinity gigabit cover most of Fort Wayne; modeled at ~85% county-wide with lower rural fiber reach."
+        }
+      ]
+    },
+    {
+      "key": "civicFabric",
+      "label": "Civic Fabric",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "historicRegisterPer10k",
+          "label": "Historic Register listings per 10k",
+          "value": 2.0,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "National Register of Historic Places",
+          "sourceUrl": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_Allen_County,_Indiana",
+          "year": 2024,
+          "quality": "measured",
+          "note": "79 NRHP properties/districts in Allen County (incl. 2 National Historic Landmarks) against ~390k pop = ~2.0 per 10k."
+        },
+        {
+          "key": "culturalVenuesPer10k",
+          "label": "Cultural venues per 10k",
+          "value": 0.5,
+          "unit": "per 10k",
+          "direction": "higherBetter",
+          "source": "IMLS Museum Universe / local listings",
+          "sourceUrl": "https://www.visitfortwayne.com/things-to-do/arts-culture/",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Fort Wayne has an unusually deep arts core (Embassy Theatre, Philharmonic, Ballet, Civic Theatre, Museum of Art, Arts Campus, Science Central, plus ~10 museums); ~18-20 venues / 39 (per-10k units) ~ 0.5."
+        },
+        {
+          "key": "townCenterScore",
+          "label": "Town center quality",
+          "value": 78,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "assessed",
+          "sourceUrl": "https://www.cityoffortwayne.in.gov/1456/Current-Redevelopment-Projects",
+          "year": 2024,
+          "quality": "modeled",
+          "note": "Downtown Fort Wayne is a genuinely walkable, actively revitalized center: The Landing, Promenade Park, Parkview Field/Harrison Square, Electric Works, DORA district, Urban Trail, Arts Campus."
+        }
+      ]
+    },
+    {
+      "key": "stewardship",
+      "label": "Stewardship",
+      "blurb": "",
+      "metrics": [
+        {
+          "key": "realCapitalOutlayPerCapita",
+          "label": "Capital outlay per capita per year",
+          "value": 420,
+          "unit": "$/capita/yr",
+          "direction": "higherBetter",
+          "source": "Census of Governments / Fort Wayne ACFR",
+          "sourceUrl": "https://www.cityoffortwayne.in.gov/364/Budget-Data",
+          "year": 2023,
+          "quality": "modeled",
+          "note": "Modeled from Fort Wayne's sustained capital program (riverfront, streets, parks) plus ~$1B downtown investment over a decade; above typical for a modest-income Midwestern city."
+        },
+        {
+          "key": "capitalAssetsPerCapita",
+          "label": "Net capital assets per capita",
+          "value": 6500,
+          "unit": "$/capita",
+          "direction": "higherBetter",
+          "source": "Fort Wayne ACFR (governmental activities)",
+          "sourceUrl": "https://www.cityoffortwayne.in.gov/358/Budget-by-Classification",
+          "year": 2022,
+          "quality": "modeled",
+          "note": "Modeled net governmental capital assets per resident; exact ACFR figure not retrieved (PDF unavailable), estimated from comparable mid-size city balance sheets and Fort Wayne's large recent build-out."
+        },
+        {
+          "key": "investmentTrendScore",
+          "label": "Investment trend",
+          "value": 88,
+          "unit": "0-100",
+          "direction": "higherBetter",
+          "source": "assessed",
+          "sourceUrl": "https://www.fwbusiness.com/fwbusiness/article_b68f7d5d-d36f-5300-8e58-0bf273bd5631.html",
+          "year": 2025,
+          "quality": "modeled",
+          "note": "Very high and rising: ~$1B downtown investment over the decade, $20M Promenade Park, $89M Riverfront at Promenade Park, $28.3M Riverfront Phase IIB (2026), $286-440M Electric Works, Harrison Square/Parkview Field, and a new 10-year downtown plan. A place actively investing in its public realm now."
+        }
+      ]
+    }
+  ]
+}

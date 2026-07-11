@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
+/* Civic Wealth Index — design tokens.
+   Warm-paper editorial palette: a think-tank report that's pleasant to read. */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f7f4ec;
+  --paper-raised: #fffdf8;
+  --ink: #1b1a16;
+  --ink-soft: #4b4a42;
+  --ink-faint: #8a887c;
+  --line: #e3ddce;
+  --line-strong: #d2cab6;
+
+  --civic: #1f5c3d;      /* deep civic green — the "invested" pole */
+  --civic-bright: #2f7d54;
+  --gold: #b8892b;       /* accent, seals & rules */
+  --gap-good: #2f7d54;   /* negative gap: civic wealth keeps up */
+  --gap-bad: #c0492f;    /* positive gap: rich but under-invested */
+  --gap-mid: #c9a227;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
 }
 
 @theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-civic: var(--civic);
+  --color-civic-bright: var(--civic-bright);
+  --color-gold: var(--gold);
+  --color-gap-good: var(--gap-good);
+  --color-gap-bad: var(--gap-bad);
+  --color-gap-mid: var(--gap-mid);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle paper wash via layered gradients — no external assets. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(184, 137, 43, 0.05), transparent 60%),
+    radial-gradient(1000px 700px at 100% 0%, rgba(31, 92, 61, 0.04), transparent 55%);
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Hairline rule with a civic-gold tick, used under section headers. */
+.rule-civic {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), var(--line) 40%, transparent);
 }
