@@ -7,7 +7,12 @@
   "kind": "county",
   "metro": "Fort Wayne metro",
   "seat": "Fort Wayne",
-  "keyPlaces": ["Fort Wayne", "New Haven", "Grabill", "Woodburn"],
+  "keyPlaces": [
+    "Fort Wayne",
+    "New Haven",
+    "Grabill",
+    "Woodburn"
+  ],
   "population": 390000,
   "populationYear": 2023,
   "fieldSurveyed": false,
@@ -44,7 +49,7 @@
         {
           "key": "bridgePoorPct",
           "label": "Bridges in poor condition",
-          "value": 5.0,
+          "value": 5,
           "unit": "%",
           "direction": "lowerBetter",
           "source": "FHWA National Bridge Inventory / ARTBA Bridge Report",
@@ -56,7 +61,7 @@
         {
           "key": "pavementPoorPct",
           "label": "Roads in poor condition",
-          "value": 18.0,
+          "value": 18,
           "unit": "%",
           "direction": "lowerBetter",
           "source": "FHWA HPMS / INDOT",
@@ -68,14 +73,14 @@
         {
           "key": "roundaboutRatio",
           "label": "Roundabout ratio",
-          "value": 0.06,
+          "value": 0.068,
           "unit": "ratio",
           "direction": "higherBetter",
-          "source": "OpenStreetMap Overpass",
-          "sourceUrl": "https://overpass-turbo.eu/",
-          "year": 2024,
-          "quality": "modeled",
-          "note": "Fort Wayne/Allen County has adopted some roundabouts but far fewer than Hamilton County; modeled low ratio pending Overpass query."
+          "source": "OpenStreetMap (Overpass API)",
+          "sourceUrl": "https://www.openstreetmap.org/",
+          "year": 2026,
+          "quality": "measured",
+          "note": "58 roundabout ways vs 777 signalized-intersection nodes in OpenStreetMap; reported as an adoption index (shrunk toward zero for low counts)."
         },
         {
           "key": "trafficDeathsPer100k",
@@ -178,7 +183,7 @@
         {
           "key": "learningRate",
           "label": "Learning rate",
-          "value": 1.0,
+          "value": 1,
           "unit": "grade/yr",
           "direction": "higherBetter",
           "source": "SEDA (Stanford Education Data Archive)",
@@ -307,7 +312,7 @@
         {
           "key": "historicRegisterPer10k",
           "label": "Historic Register listings per 10k",
-          "value": 2.0,
+          "value": 2,
           "unit": "per 10k",
           "direction": "higherBetter",
           "source": "National Register of Historic Places",

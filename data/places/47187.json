@@ -7,7 +7,13 @@
   "kind": "county",
   "metro": "Nashville metro",
   "seat": "Franklin",
-  "keyPlaces": ["Franklin", "Brentwood", "Nolensville", "Spring Hill", "Fairview"],
+  "keyPlaces": [
+    "Franklin",
+    "Brentwood",
+    "Nolensville",
+    "Spring Hill",
+    "Fairview"
+  ],
   "population": 264460,
   "populationYear": 2023,
   "fieldSurveyed": true,
@@ -58,7 +64,7 @@
         {
           "key": "pavementPoorPct",
           "label": "Roads in poor ride quality",
-          "value": 7.0,
+          "value": 7,
           "unit": "%",
           "direction": "lowerBetter",
           "source": "FHWA HPMS / TDOT",
@@ -70,14 +76,14 @@
         {
           "key": "roundaboutRatio",
           "label": "Roundabouts vs. signalized intersections",
-          "value": 0.03,
+          "value": 0.215,
           "unit": "ratio",
           "direction": "higherBetter",
-          "source": "OpenStreetMap Overpass",
-          "sourceUrl": "https://overpass-turbo.eu/",
-          "year": 2025,
-          "quality": "field",
-          "note": "Field survey: a 'stoplight city' with very few roundabouts; near the weak anchor."
+          "source": "OpenStreetMap (Overpass API)",
+          "sourceUrl": "https://www.openstreetmap.org/",
+          "year": 2026,
+          "quality": "measured",
+          "note": "109 roundabout ways vs 384 signalized-intersection nodes in OpenStreetMap; reported as an adoption index (shrunk toward zero for low counts)."
         },
         {
           "key": "trafficDeathsPer100k",
@@ -113,7 +119,7 @@
         {
           "key": "parkAcresPer1k",
           "label": "Park acres per 1,000 residents",
-          "value": 11.0,
+          "value": 11,
           "unit": "acres/1k",
           "direction": "higherBetter",
           "source": "Trust for Public Land / local parks dept",
@@ -309,7 +315,7 @@
         {
           "key": "historicRegisterPer10k",
           "label": "National Register listings per 10,000",
-          "value": 5.0,
+          "value": 5,
           "unit": "per 10k",
           "direction": "higherBetter",
           "source": "National Register of Historic Places",

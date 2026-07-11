@@ -9,6 +9,13 @@ export interface Essay {
   dek: string;
   date: string; // ISO
   readMins: number;
+  /** author credit; defaults to the site when absent */
+  author?: string;
+  /** short attribution/standfirst shown under the dek (may contain a source note) */
+  credit?: string;
+  /** link to the original source (e.g. the author's thread) */
+  sourceUrl?: string;
+  sourceLabel?: string;
   body: Block[];
 }
 
@@ -34,8 +41,13 @@ export const ESSAYS: Essay[] = [
     slug: "the-land-that-time-forgot",
     title: "The Land That Time Forgot",
     dek: "A field survey of suburban Nashville's Williamson County — one of the richest places in America, and one of the least invested in its public realm.",
-    date: "2026-07-09",
+    date: "2026-06-23",
     readMins: 7,
+    author: "Aaron Renn",
+    credit:
+      "By Aaron Renn, urbanist and author of the newsletter at aaronrenn.com. Adapted, with light edits, from his field survey originally published as a thread on X in June 2025. This survey is the observation that prompted the Civic Wealth Index.",
+    sourceUrl: "https://x.com/aaron_renn/status/1937316103195095515",
+    sourceLabel: "Read the original thread on X",
     body: [
       { t: "p", x: "I spent time surveying suburban Nashville's Williamson County — Franklin, Brentwood, Nolensville, Leipers Fork. I'm not going to lie: it might be the least impressive wealthy, favored-quarter suburban area I've ever visited. Let me talk about the good up front, because there's real good here." },
       { t: "h2", x: "The good" },

@@ -7,7 +7,17 @@
   "kind": "county",
   "metro": "Chicago metro (Northwest Indiana)",
   "seat": "Crown Point",
-  "keyPlaces": ["Gary", "Hammond", "East Chicago", "Merrillville", "Crown Point", "Munster", "Schererville", "St. John", "Dyer"],
+  "keyPlaces": [
+    "Gary",
+    "Hammond",
+    "East Chicago",
+    "Merrillville",
+    "Crown Point",
+    "Munster",
+    "Schererville",
+    "St. John",
+    "Dyer"
+  ],
   "population": 495000,
   "populationYear": 2023,
   "fieldSurveyed": false,
@@ -70,14 +80,14 @@
         {
           "key": "roundaboutRatio",
           "label": "Roundabout ratio",
-          "value": 0.02,
+          "value": 0.08,
           "unit": "ratio",
           "direction": "higherBetter",
-          "source": "OpenStreetMap Overpass (modeled)",
-          "sourceUrl": "https://overpass-turbo.eu/",
-          "year": 2024,
-          "quality": "modeled",
-          "note": "Lake County's grid is signal-dominated; very few roundabouts, unlike Indiana's Hamilton County. Estimated from regional OSM density."
+          "source": "OpenStreetMap (Overpass API)",
+          "sourceUrl": "https://www.openstreetmap.org/",
+          "year": 2026,
+          "quality": "measured",
+          "note": "79 roundabout ways vs 897 signalized-intersection nodes in OpenStreetMap; reported as an adoption index (shrunk toward zero for low counts)."
         },
         {
           "key": "trafficDeathsPer100k",
@@ -247,7 +257,7 @@
         {
           "key": "violentCrimePer1k",
           "label": "Violent crime",
-          "value": 5.0,
+          "value": 5,
           "unit": "per 1k",
           "direction": "lowerBetter",
           "source": "FBI Crime Data Explorer (modeled county blend)",

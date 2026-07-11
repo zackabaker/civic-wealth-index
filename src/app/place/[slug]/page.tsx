@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import PillarBreakdown from "@/components/PillarBreakdown";
 import { ScoreDial, GapPill, Eyebrow } from "@/components/Bits";
+import { CiteBox } from "@/components/CiteBox";
 import { getAllSlugs, getPlace, getNarrative } from "@/lib/data";
 import { formatPop, gapSentence, scoreColor, formatValue } from "@/lib/format";
 import { getRawPlace } from "@/lib/data";
@@ -184,6 +185,11 @@ export default async function PlacePage({
           How these are scored
         </Link>
       </div>
+
+      <section className="mt-10">
+        <h3 className="mb-2 text-sm font-600 uppercase tracking-wide text-ink-faint">Cite this page</h3>
+        <CiteBox place={{ name: place.name, state: place.state, slug: place.slug, cwi: place.cwi }} />
+      </section>
     </article>
   );
 }

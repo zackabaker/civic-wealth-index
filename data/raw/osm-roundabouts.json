@@ -1,0 +1,472 @@
+{
+  "18001": {
+    "roundabouts": 1,
+    "signals": 8,
+    "ratio": 0.111
+  },
+  "18003": {
+    "roundabouts": 58,
+    "signals": 777,
+    "ratio": 0.069
+  },
+  "18005": {
+    "roundabouts": 22,
+    "signals": 126,
+    "ratio": 0.149
+  },
+  "18007": {
+    "roundabouts": 0,
+    "signals": 1,
+    "ratio": 0
+  },
+  "18009": {
+    "roundabouts": 0,
+    "signals": 2,
+    "ratio": 0
+  },
+  "18011": {
+    "roundabouts": 64,
+    "signals": 95,
+    "ratio": 0.403
+  },
+  "18013": {
+    "roundabouts": 0,
+    "signals": 7,
+    "ratio": 0
+  },
+  "18015": {
+    "roundabouts": 0,
+    "signals": 2,
+    "ratio": 0
+  },
+  "18017": {
+    "roundabouts": 2,
+    "signals": 60,
+    "ratio": 0.032
+  },
+  "18019": {
+    "roundabouts": 25,
+    "signals": 282,
+    "ratio": 0.081
+  },
+  "18021": {
+    "roundabouts": 0,
+    "signals": 10,
+    "ratio": 0
+  },
+  "18023": {
+    "roundabouts": 4,
+    "signals": 13,
+    "ratio": 0.235
+  },
+  "18025": {
+    "roundabouts": 0,
+    "signals": 0,
+    "ratio": null
+  },
+  "18027": {
+    "roundabouts": 2,
+    "signals": 10,
+    "ratio": 0.167
+  },
+  "18029": {
+    "roundabouts": 0,
+    "signals": 36,
+    "ratio": 0
+  },
+  "18031": {
+    "roundabouts": 2,
+    "signals": 13,
+    "ratio": 0.133
+  },
+  "18033": {
+    "roundabouts": 1,
+    "signals": 29,
+    "ratio": 0.033
+  },
+  "18035": {
+    "roundabouts": 17,
+    "signals": 162,
+    "ratio": 0.095
+  },
+  "18037": {
+    "roundabouts": 0,
+    "signals": 29,
+    "ratio": 0
+  },
+  "18039": {
+    "roundabouts": 44,
+    "signals": 291,
+    "ratio": 0.131
+  },
+  "18041": {
+    "roundabouts": 1,
+    "signals": 6,
+    "ratio": 0.143
+  },
+  "18043": {
+    "roundabouts": 6,
+    "signals": 101,
+    "ratio": 0.056
+  },
+  "18045": {
+    "roundabouts": 0,
+    "signals": 4,
+    "ratio": 0
+  },
+  "18047": {
+    "roundabouts": 0,
+    "signals": 11,
+    "ratio": 0
+  },
+  "18049": {
+    "roundabouts": 0,
+    "signals": 25,
+    "ratio": 0
+  },
+  "18051": {
+    "roundabouts": 3,
+    "signals": 14,
+    "ratio": 0.176
+  },
+  "18053": {
+    "roundabouts": 3,
+    "signals": 48,
+    "ratio": 0.059
+  },
+  "18055": {
+    "roundabouts": 5,
+    "signals": 11,
+    "ratio": 0.313
+  },
+  "18057": {
+    "roundabouts": 539,
+    "signals": 320,
+    "ratio": 0.627
+  },
+  "18059": {
+    "roundabouts": 26,
+    "signals": 50,
+    "ratio": 0.342
+  },
+  "18061": {
+    "roundabouts": 0,
+    "signals": 17,
+    "ratio": 0
+  },
+  "18063": {
+    "roundabouts": 71,
+    "signals": 232,
+    "ratio": 0.234
+  },
+  "18065": {
+    "roundabouts": 1,
+    "signals": 14,
+    "ratio": 0.067
+  },
+  "18067": {
+    "roundabouts": 12,
+    "signals": 47,
+    "ratio": 0.203
+  },
+  "18069": {
+    "roundabouts": 2,
+    "signals": 18,
+    "ratio": 0.1
+  },
+  "18071": {
+    "roundabouts": 13,
+    "signals": 30,
+    "ratio": 0.302
+  },
+  "18073": {
+    "roundabouts": 0,
+    "signals": 9,
+    "ratio": 0
+  },
+  "18075": {
+    "roundabouts": 1,
+    "signals": 8,
+    "ratio": 0.111
+  },
+  "18077": {
+    "roundabouts": 8,
+    "signals": 15,
+    "ratio": 0.348
+  },
+  "18079": {
+    "roundabouts": 21,
+    "signals": 12,
+    "ratio": 0.636
+  },
+  "18081": {
+    "roundabouts": 115,
+    "signals": 142,
+    "ratio": 0.447
+  },
+  "18083": {
+    "roundabouts": 0,
+    "signals": 28,
+    "ratio": 0
+  },
+  "18085": {
+    "roundabouts": 15,
+    "signals": 73,
+    "ratio": 0.17
+  },
+  "18087": {
+    "roundabouts": 0,
+    "signals": 8,
+    "ratio": 0
+  },
+  "18089": {
+    "roundabouts": 79,
+    "signals": 897,
+    "ratio": 0.081
+  },
+  "18091": {
+    "roundabouts": 29,
+    "signals": 137,
+    "ratio": 0.175
+  },
+  "18093": {
+    "roundabouts": 1,
+    "signals": 47,
+    "ratio": 0.021
+  },
+  "18095": {
+    "roundabouts": 16,
+    "signals": 194,
+    "ratio": 0.076
+  },
+  "18097": {
+    "roundabouts": 207,
+    "signals": 2890,
+    "ratio": 0.067
+  },
+  "18099": {
+    "roundabouts": 5,
+    "signals": 28,
+    "ratio": 0.152
+  },
+  "18101": {
+    "roundabouts": 0,
+    "signals": 5,
+    "ratio": 0
+  },
+  "18103": {
+    "roundabouts": 0,
+    "signals": 36,
+    "ratio": 0
+  },
+  "18105": {
+    "roundabouts": 68,
+    "signals": 214,
+    "ratio": 0.241
+  },
+  "18107": {
+    "roundabouts": 0,
+    "signals": 33,
+    "ratio": 0
+  },
+  "18109": {
+    "roundabouts": 33,
+    "signals": 32,
+    "ratio": 0.508
+  },
+  "18111": {
+    "roundabouts": 0,
+    "signals": 5,
+    "ratio": 0
+  },
+  "18113": {
+    "roundabouts": 2,
+    "signals": 38,
+    "ratio": 0.05
+  },
+  "18115": {
+    "roundabouts": 0,
+    "signals": 1,
+    "ratio": 0
+  },
+  "18117": {
+    "roundabouts": 11,
+    "signals": 3,
+    "ratio": 0.786
+  },
+  "18119": {
+    "roundabouts": 1,
+    "signals": 5,
+    "ratio": 0.167
+  },
+  "18121": {
+    "roundabouts": 0,
+    "signals": 6,
+    "ratio": 0
+  },
+  "18123": {
+    "roundabouts": 0,
+    "signals": 9,
+    "ratio": 0
+  },
+  "18125": {
+    "roundabouts": 1,
+    "signals": 3,
+    "ratio": 0.25
+  },
+  "18127": {
+    "roundabouts": 49,
+    "signals": 262,
+    "ratio": 0.158
+  },
+  "18129": {
+    "roundabouts": 1,
+    "signals": 6,
+    "ratio": 0.143
+  },
+  "18131": {
+    "roundabouts": 0,
+    "signals": 3,
+    "ratio": 0
+  },
+  "18133": {
+    "roundabouts": 2,
+    "signals": 15,
+    "ratio": 0.118
+  },
+  "18135": {
+    "roundabouts": 0,
+    "signals": 5,
+    "ratio": 0
+  },
+  "18137": {
+    "roundabouts": 0,
+    "signals": 7,
+    "ratio": 0
+  },
+  "18139": {
+    "roundabouts": 0,
+    "signals": 5,
+    "ratio": 0
+  },
+  "18141": {
+    "roundabouts": 96,
+    "signals": 466,
+    "ratio": 0.171
+  },
+  "18143": {
+    "roundabouts": 1,
+    "signals": 10,
+    "ratio": 0.091
+  },
+  "18145": {
+    "roundabouts": 14,
+    "signals": 17,
+    "ratio": 0.452
+  },
+  "18147": {
+    "roundabouts": 3,
+    "signals": 7,
+    "ratio": 0.3
+  },
+  "18149": {
+    "roundabouts": 0,
+    "signals": 2,
+    "ratio": 0
+  },
+  "18151": {
+    "roundabouts": 8,
+    "signals": 22,
+    "ratio": 0.267
+  },
+  "18153": {
+    "roundabouts": 0,
+    "signals": 4,
+    "ratio": 0
+  },
+  "18155": {
+    "roundabouts": 1,
+    "signals": 3,
+    "ratio": 0.25
+  },
+  "18157": {
+    "roundabouts": 103,
+    "signals": 307,
+    "ratio": 0.251
+  },
+  "18159": {
+    "roundabouts": 13,
+    "signals": 5,
+    "ratio": 0.722
+  },
+  "18161": {
+    "roundabouts": 0,
+    "signals": 3,
+    "ratio": 0
+  },
+  "18163": {
+    "roundabouts": 9,
+    "signals": 355,
+    "ratio": 0.025
+  },
+  "18165": {
+    "roundabouts": 0,
+    "signals": 5,
+    "ratio": 0
+  },
+  "18167": {
+    "roundabouts": 24,
+    "signals": 210,
+    "ratio": 0.103
+  },
+  "18169": {
+    "roundabouts": 1,
+    "signals": 17,
+    "ratio": 0.056
+  },
+  "18171": {
+    "roundabouts": 0,
+    "signals": 1,
+    "ratio": 0
+  },
+  "18173": {
+    "roundabouts": 16,
+    "signals": 67,
+    "ratio": 0.193
+  },
+  "18175": {
+    "roundabouts": 6,
+    "signals": 4,
+    "ratio": 0.6
+  },
+  "18177": {
+    "roundabouts": 0,
+    "signals": 73,
+    "ratio": 0
+  },
+  "18179": {
+    "roundabouts": 0,
+    "signals": 4,
+    "ratio": 0
+  },
+  "18181": {
+    "roundabouts": 6,
+    "signals": 9,
+    "ratio": 0.4
+  },
+  "18183": {
+    "roundabouts": 1,
+    "signals": 33,
+    "ratio": 0.029
+  },
+  "47187": {
+    "roundabouts": 109,
+    "signals": 384,
+    "ratio": 0.221
+  },
+  "08097": {
+    "roundabouts": 4,
+    "signals": 18,
+    "ratio": 0.182
+  }
+}

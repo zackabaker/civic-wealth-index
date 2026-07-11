@@ -7,7 +7,12 @@
   "kind": "county",
   "metro": "Glenwood Springs micro / Roaring Fork Valley",
   "seat": "Aspen",
-  "keyPlaces": ["Aspen", "Snowmass Village", "Basalt", "Woody Creek"],
+  "keyPlaces": [
+    "Aspen",
+    "Snowmass Village",
+    "Basalt",
+    "Woody Creek"
+  ],
   "population": 16985,
   "populationYear": 2024,
   "fieldSurveyed": false,
@@ -70,14 +75,14 @@
         {
           "key": "roundaboutRatio",
           "label": "Roundabout ratio",
-          "value": 0.12,
+          "value": 0.108,
           "unit": "ratio",
           "direction": "higherBetter",
-          "source": "OpenStreetMap Overpass (modeled)",
-          "sourceUrl": "https://www.openstreetmap.org/relation/1411331",
-          "year": 2025,
-          "quality": "modeled",
-          "note": "Aspen and the Highway 82 corridor include several prominent roundabouts (notably the SH-82/Maroon Creek roundabout) relative to a small number of signalized intersections. Modeled ratio ~0.12."
+          "source": "OpenStreetMap (Overpass API)",
+          "sourceUrl": "https://www.openstreetmap.org/",
+          "year": 2026,
+          "quality": "measured",
+          "note": "4 roundabout ways vs 18 signalized-intersection nodes in OpenStreetMap; reported as an adoption index (shrunk toward zero for low counts)."
         },
         {
           "key": "trafficDeathsPer100k",

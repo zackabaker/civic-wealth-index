@@ -66,14 +66,14 @@
         {
           "key": "roundaboutRatio",
           "label": "Roundabouts vs. signals",
-          "value": 0.061,
+          "value": 0,
           "unit": "ratio",
           "direction": "higherBetter",
-          "source": "CWI model estimate (v0.1)",
-          "sourceUrl": "https://civicwealthindex.org/methodology",
-          "year": "v0.1",
-          "quality": "modeled",
-          "note": "Carmel-style roundabout adoption is rare; most counties sit near the floor."
+          "source": "OpenStreetMap (Overpass API)",
+          "sourceUrl": "https://www.openstreetmap.org/",
+          "year": 2026,
+          "quality": "measured",
+          "note": "0 roundabout ways vs 29 signalized-intersection nodes in OpenStreetMap; reported as an adoption index (shrunk toward zero for low counts)."
         },
         {
           "key": "trafficDeathsPer100k",

@@ -7,6 +7,7 @@ const NAV = [
   { href: "/gaps", label: "The Gap" },
   { href: "/methodology", label: "Method" },
   { href: "/essays", label: "Essays" },
+  { href: "/data", label: "Data" },
 ];
 
 export function SiteHeader() {

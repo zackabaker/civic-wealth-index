@@ -1,6 +1,7 @@
 import Link from "next/link";
 import GapScatter from "@/components/GapScatter";
 import RankTable from "@/components/RankTable";
+import MapExplorer from "@/components/MapExplorer";
 import { Eyebrow } from "@/components/Bits";
 import { getScoredPlaces } from "@/lib/data";
 import { PILLAR_META, PILLAR_WEIGHTS } from "@/lib/config";
@@ -10,6 +11,11 @@ export default function Home() {
   const places = getScoredPlaces();
   const deep = places.filter((p) => p.profile !== "estimate");
   const inCount = places.filter((p) => p.state === "IN").length;
+  const mapData = Object.fromEntries(
+    places
+      .filter((p) => p.state === "IN")
+      .map((p) => [p.fips, { cwi: p.cwi, gap: p.sovereigntyGap, name: p.name, profile: p.profile }])
+  );
 
   return (
     <div>
@@ -75,6 +81,57 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Featured: Carmel vs Williamson */}
+      <section className="mx-auto max-w-6xl px-5 py-16">
+        <Link
+          href="/carmel-vs-williamson"
+          className="group block overflow-hidden rounded-2xl border border-line bg-paper-raised transition-colors hover:border-civic"
+        >
+          <div className="grid gap-6 p-7 md:grid-cols-[1.4fr_1fr] md:items-center md:p-9">
+            <div>
+              <Eyebrow>The case that started this</Eyebrow>
+              <h2 className="font-display text-3xl font-600 leading-tight tracking-tight text-ink group-hover:text-civic md:text-4xl">
+                Carmel vs. Williamson County
+              </h2>
+              <p className="mt-3 leading-relaxed text-ink-soft">
+                Suburban Nashville&apos;s Williamson County is the richer place. Carmel, Indiana has
+                five times the roundabouts, four times the sidewalks, and a public realm that laps
+                it. A data reckoning — built on urbanist Aaron Renn&apos;s field survey.
+              </p>
+              <span className="mt-4 inline-block text-sm font-600 text-civic">Read the receipts →</span>
+            </div>
+            <div className="grid grid-cols-2 gap-3 text-center">
+              <div className="rounded-xl border border-line bg-paper p-4">
+                <div className="font-display text-3xl font-700 text-civic tnum">539</div>
+                <div className="mt-1 text-xs text-ink-faint">Carmel roundabouts</div>
+              </div>
+              <div className="rounded-xl border border-line bg-paper p-4">
+                <div className="font-display text-3xl font-700 text-gap-bad tnum">109</div>
+                <div className="mt-1 text-xs text-ink-faint">Williamson roundabouts</div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </section>
+
+      {/* Map */}
+      <section className="border-y border-line bg-paper-raised/40">
+        <div className="mx-auto max-w-6xl px-5 py-16">
+          <div className="mb-6 flex items-end justify-between gap-4">
+            <div>
+              <Eyebrow>The whole state</Eyebrow>
+              <h2 className="font-display text-3xl font-600 tracking-tight text-ink">
+                Indiana, county by county
+              </h2>
+            </div>
+            <Link href="/map" className="text-sm font-600 text-civic hover:underline">
+              Open the map →
+            </Link>
+          </div>
+          <MapExplorer data={mapData} />
         </div>
       </section>
 

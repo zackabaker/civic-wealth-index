@@ -70,7 +70,7 @@ export const BENCHMARKS: Record<string, Benchmark> = {
   // Movement
   bridgePoorPct: { weak: 15, strong: 1 },
   pavementPoorPct: { weak: 40, strong: 5 },
-  roundaboutRatio: { weak: 0.02, strong: 0.3 },
+  roundaboutRatio: { weak: 0.02, strong: 0.45 },
   trafficDeathsPer100k: { weak: 20, strong: 5 },
   sidewalkCoverage: { weak: 0.1, strong: 0.8 },
 

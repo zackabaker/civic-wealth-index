@@ -40,12 +40,31 @@ export default async function EssayPage({
         ← Essays
       </Link>
       <div className="mt-4 text-xs uppercase tracking-wider text-gold">
-        {fmt(e.date)} · {e.readMins} min read
+        {fmt(e.date)} · {e.readMins} min read{e.author ? ` · by ${e.author}` : ""}
       </div>
       <h1 className="mt-2 font-display text-4xl font-600 leading-tight tracking-tight text-ink md:text-5xl">
         {e.title}
       </h1>
       <p className="mt-4 font-display text-xl italic leading-snug text-ink-soft">{e.dek}</p>
+
+      {e.credit && (
+        <div className="mt-5 rounded-xl border border-line bg-paper-raised/70 px-5 py-3 text-sm leading-relaxed text-ink-soft">
+          {e.credit}
+          {e.sourceUrl && (
+            <>
+              {" "}
+              <a
+                href={e.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-600 text-civic hover:underline"
+              >
+                {e.sourceLabel ?? "Source"} →
+              </a>
+            </>
+          )}
+        </div>
+      )}
 
       <div className="rule-civic my-8" />
 

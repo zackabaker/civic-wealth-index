@@ -7,7 +7,12 @@
   "kind": "county",
   "metro": "Indianapolis metro",
   "seat": "Noblesville",
-  "keyPlaces": ["Carmel", "Fishers", "Westfield", "Noblesville"],
+  "keyPlaces": [
+    "Carmel",
+    "Fishers",
+    "Westfield",
+    "Noblesville"
+  ],
   "population": 379704,
   "populationYear": 2024,
   "fieldSurveyed": true,
@@ -46,7 +51,7 @@
         {
           "key": "bridgePoorPct",
           "label": "Bridges in poor condition",
-          "value": 3.0,
+          "value": 3,
           "unit": "%",
           "direction": "lowerBetter",
           "source": "FHWA National Bridge Inventory (modeled from Indiana 5.3% structurally deficient, adjusted for Hamilton County's newer, better-funded inventory)",
@@ -58,7 +63,7 @@
         {
           "key": "pavementPoorPct",
           "label": "Roads in poor ride quality",
-          "value": 7.0,
+          "value": 7,
           "unit": "%",
           "direction": "lowerBetter",
           "source": "FHWA HPMS / INDOT (modeled; affluent, recently built suburban network)",
@@ -70,19 +75,19 @@
         {
           "key": "roundaboutRatio",
           "label": "Roundabout ratio",
-          "value": 0.42,
+          "value": 0.617,
           "unit": "ratio",
           "direction": "higherBetter",
-          "source": "OpenStreetMap / City of Carmel (Carmel alone: 160+ roundabouts vs ~10 signals; countywide blended with Fishers, Westfield, Noblesville)",
-          "sourceUrl": "https://www.carmel.in.gov/311/Roundabouts",
-          "year": 2025,
-          "quality": "field",
-          "note": "Carmel is the roundabout capital of the U.S. with 160+ roundabouts and only about a dozen signalized intersections (Carmel-only ratio approaches 0.9). Blended countywide with less-converted municipalities yields ~0.42, still far above the 0.30 'strong' anchor."
+          "source": "OpenStreetMap (Overpass API)",
+          "sourceUrl": "https://www.openstreetmap.org/",
+          "year": 2026,
+          "quality": "measured",
+          "note": "539 roundabout ways vs 320 signalized-intersection nodes in OpenStreetMap; reported as an adoption index (shrunk toward zero for low counts)."
         },
         {
           "key": "trafficDeathsPer100k",
           "label": "Traffic deaths",
-          "value": 7.0,
+          "value": 7,
           "unit": "per 100k",
           "direction": "lowerBetter",
           "source": "NHTSA FARS / County Health Rankings (modeled)",
@@ -113,7 +118,7 @@
         {
           "key": "parkAcresPer1k",
           "label": "Park acres per 1,000 residents",
-          "value": 12.0,
+          "value": 12,
           "unit": "acres/1k",
           "direction": "higherBetter",
           "source": "Trust for Public Land / local parks depts (modeled from Carmel 500+ acres, Westfield Grand Park 400+ acres, Fishers and county parks)",
@@ -125,7 +130,7 @@
         {
           "key": "parkAccessPct",
           "label": "Residents within a 10-min walk of a park",
-          "value": 62.0,
+          "value": 62,
           "unit": "%",
           "direction": "higherBetter",
           "source": "TPL ParkServe (modeled for suburban form)",
@@ -161,7 +166,7 @@
         {
           "key": "treeCanopyPct",
           "label": "Tree canopy",
-          "value": 30.0,
+          "value": 30,
           "unit": "%",
           "direction": "higherBetter",
           "source": "USFS NLCD Tree Canopy Cover (modeled from Indiana urban canopy assessment)",
@@ -223,7 +228,7 @@
         {
           "key": "lifeExpectancy",
           "label": "Life expectancy",
-          "value": 81.0,
+          "value": 81,
           "unit": "years",
           "direction": "higherBetter",
           "source": "CDC/NCHS USALEEP / County Health Rankings",
@@ -247,7 +252,7 @@
         {
           "key": "violentCrimePer1k",
           "label": "Violent crime",
-          "value": 1.0,
+          "value": 1,
           "unit": "per 1k",
           "direction": "lowerBetter",
           "source": "FBI Crime Data Explorer (modeled; ~10.3 per 100k reported)",
@@ -266,7 +271,7 @@
         {
           "key": "waterViolationPoints",
           "label": "Drinking-water violations",
-          "value": 0.0,
+          "value": 0,
           "unit": "0-10",
           "direction": "lowerBetter",
           "source": "EPA SDWIS (modeled; large well-run public utilities, Citizens Energy / Carmel Utilities)",
@@ -278,7 +283,7 @@
         {
           "key": "broadbandCoveragePct",
           "label": "Broadband 100/20 Mbps availability",
-          "value": 99.0,
+          "value": 99,
           "unit": "%",
           "direction": "higherBetter",
           "source": "FCC Broadband Data Collection (modeled from provider coverage)",
@@ -290,7 +295,7 @@
         {
           "key": "broadbandGigabitPct",
           "label": "Gigabit availability",
-          "value": 90.0,
+          "value": 90,
           "unit": "%",
           "direction": "higherBetter",
           "source": "FCC Broadband Data Collection (modeled)",
