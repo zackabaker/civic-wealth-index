@@ -69,3 +69,24 @@ export function getNarrative(slug: string): Narrative | null {
     return null;
   }
 }
+
+export interface ValidationStudy {
+  headline: string;
+  cwiGrowthCorrelation: number | null;
+  gapGrowthCorrelation: number | null;
+  n: number;
+  caveats: string[];
+  findings: { heading: string; body: string[] }[];
+  standouts: { county: string; note: string }[];
+  sources: string[];
+}
+
+export function getValidationStudy(): ValidationStudy | null {
+  const f = path.join(process.cwd(), "data", "validation-study.json");
+  if (!fs.existsSync(f)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(f, "utf8")) as ValidationStudy;
+  } catch {
+    return null;
+  }
+}

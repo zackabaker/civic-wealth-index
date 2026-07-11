@@ -62,15 +62,20 @@ export function SiteFooter() {
               the wealth GDP can&apos;t see. Independent, open-method, {CWI_VERSION}.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
-            {NAV.map((n) => (
+          <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm sm:grid-cols-3">
+            {[
+              ...NAV,
+              { href: "/map", label: "Map" },
+              { href: "/carmel-vs-williamson", label: "Carmel vs. Williamson" },
+              { href: "/report/indiana-2026", label: "Indiana 2026 report" },
+              { href: "/does-civic-wealth-pay", label: "Does it pay?" },
+              { href: "/press", label: "Press kit" },
+              { href: "/about", label: "About" },
+            ].map((n) => (
               <Link key={n.href} href={n.href} className="text-ink-soft hover:text-ink">
                 {n.label}
               </Link>
             ))}
-            <Link href="/about" className="text-ink-soft hover:text-ink">
-              About
-            </Link>
           </div>
         </div>
         <div className="mt-10 flex flex-col gap-2 border-t border-line pt-6 text-xs text-ink-faint md:flex-row md:justify-between">

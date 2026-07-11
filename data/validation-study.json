@@ -1,0 +1,73 @@
+{
+  "headline": "Higher civic wealth tracks with faster population growth across Indiana counties, but the signal is almost entirely explained by private wealth (income) — once income is controlled for, CWI adds essentially nothing.",
+  "cwiGrowthCorrelation": 0.58,
+  "gapGrowthCorrelation": 0.45,
+  "n": 92,
+  "caveats": [
+    "SEVERE CONFOUNDING: The Civic Wealth Index correlates with our private-wealth (income) proxy at r=0.73. Private wealth alone predicts growth better than CWI does (r=0.77 vs 0.58). When growth is regressed on CWI while holding private wealth constant, the partial correlation collapses to r=0.03 for CWI and r=-0.04 for the Sovereignty Gap — statistically indistinguishable from zero. In this dataset, civic wealth carries no independent predictive power over and above income.",
+    "This is a cross-sectional, observational study. A correlation between a place's current civic wealth and its 2020-2024 growth cannot establish that civic wealth CAUSES growth. Reverse causation is at least as plausible: growing, affluent suburbs (Hamilton, Boone, Hendricks) can afford to build the parks, schools, and civic institutions the index measures. Wealth and desirability may produce civic wealth rather than the other way around.",
+    "The Sovereignty Gap here is computed as private_wealth_score minus a civic component, so it is not an independent variable — it is arithmetically entangled with both CWI and private wealth. Its correlation with growth is a restatement of the private-wealth signal, not a separate finding.",
+    "Population change is a coarse proxy for 'desirability.' It bundles domestic migration, international immigration (which IBRC notes was the dominant driver of Indiana's 2024 growth), and natural increase. We could not obtain clean county-level net-domestic-migration figures for all 92 counties, so we could not isolate the 'people voting with their feet' component that best tests the desirability thesis.",
+    "The largest, fastest-growing counties are a small handful of Indianapolis/Louisville-metro suburbs. Much of the positive correlation is driven by roughly six high-CWI, high-growth suburban outliers against a long tail of small rural counties near zero growth. The relationship is not evenly distributed across the state."
+  ],
+  "findings": [
+    {
+      "heading": "The raw correlation is real and moderately strong",
+      "body": [
+        "Across all 92 Indiana counties, the Civic Wealth Index has a Pearson correlation of r=0.58 with 2020-2024 population change (t=6.7, comfortably significant). The Sovereignty Gap correlates at r=0.45. Both point the intuitive direction: counties that score higher on civic wealth tended to grow faster over the period.",
+        "At face value this looks like a confirmation of the thesis. The state's growth is concentrated in exactly the places the index rates highly — Hamilton (CWI 79.6, +8.8%), Boone (62.3, +10.7%), Hendricks (61.1, +8.5%), and Hancock (57.8, +10.8%). These four suburban counties sit at the top of both rankings simultaneously."
+      ]
+    },
+    {
+      "heading": "But income explains it away almost completely",
+      "body": [
+        "The problem is that civic wealth and private wealth are not independent. In this dataset CWI correlates with the private_wealth_score at r=0.73, and private wealth is itself the single best predictor of growth (r=0.77 — stronger than CWI's own 0.58). Rich counties both score high on civic wealth AND grow fast, and the question is whether the civic-wealth part matters once we account for the money.",
+        "It does not. Computing the partial correlation of CWI with growth while holding private wealth constant yields r=0.03 — effectively zero. The same test on the Sovereignty Gap yields r=-0.04. Whatever predictive power CWI appeared to have was borrowed entirely from its correlation with income. Knowing a county's civic wealth tells you nothing about its growth that you didn't already know from its wealth.",
+        "This is the honest headline. The index is a good DESCRIPTION of prosperous, growing places, but as an independent PREDICTOR of growth beyond what income already tells you, it does not survive the most basic confound control."
+      ]
+    },
+    {
+      "heading": "Direction of causation is unresolved and probably runs the 'wrong' way",
+      "body": [
+        "Even the raw 0.58 correlation should not be read as 'civic wealth attracts people.' The suburban counties driving the result are places where affluent in-migration came FIRST (proximity to Indianapolis jobs, cheap developable land, good schools funded by rising tax bases) and the civic amenities the index rewards were built with the resulting money. Growth plausibly manufactures civic wealth, not the reverse.",
+        "A fair causal test would need a longitudinal design — does a rise in civic wealth at time T predict growth at time T+1, controlling for baseline income and prior growth? This cross-section cannot do that, and the near-zero partial correlation gives little reason to expect civic wealth would clear that bar."
+      ]
+    }
+  ],
+  "standouts": [
+    {
+      "county": "Hamilton County",
+      "note": "Thesis confirmed on its face: highest CWI in Indiana (79.6) and +8.8% growth. But also the richest county (private wealth 69.8), so it is exactly the case where civic wealth and income cannot be told apart."
+    },
+    {
+      "county": "Boone County",
+      "note": "Fastest-growing large county (+10.7%) with the 2nd-highest CWI (62.3). Another affluent Indy suburb — reinforces the pattern and the confound simultaneously."
+    },
+    {
+      "county": "Hancock County",
+      "note": "The state's fastest grower (+10.8%) with a mid-pack private wealth score (47.1) yet a strong CWI (57.8). One of the few cases where civic strength slightly outruns raw wealth — the most genuinely thesis-supporting outlier."
+    },
+    {
+      "county": "Monroe County (Bloomington)",
+      "note": "COUNTER-EXAMPLE. 4th-highest CWI in the state (60.6) but 0.0% growth. A university county rich in public realm and civic fabric that is NOT gaining population — high civic wealth did not translate into desirability-by-migration."
+    },
+    {
+      "county": "St. Joseph County (South Bend)",
+      "note": "COUNTER-EXAMPLE. High CWI (55.5) but essentially flat (+0.4%). Another established civic center — universities, hospitals, public institutions — that scores well yet does not grow."
+    },
+    {
+      "county": "Vanderburgh & Dubois Counties",
+      "note": "COUNTER-EXAMPLES. Both score above 53 on CWI but posted 0.0% growth — solid civic infrastructure, no population gain."
+    },
+    {
+      "county": "Switzerland, Owen & Newton Counties",
+      "note": "REVERSE COUNTER-EXAMPLES. Low-CWI counties (34.8, 37.6, 39.1) that nonetheless grew ~2.5%, mostly via rural exurban spillover and cheap housing rather than any civic-wealth advantage."
+    }
+  ],
+  "sources": [
+    "https://www.stats.indiana.edu/Population/PopTotals/2024_cntyest.asp",
+    "https://www.ibrc.indiana.edu/ibr/2025/spring/article2.html",
+    "https://news.iu.edu/live/news/44768-immigration-fuels-indianas-strong-population-growth-in",
+    "https://www.hancockedc.com/news-center/p/item/61898/hancock-remains-among-fastest-growing-counties-in-indiana"
+  ]
+}

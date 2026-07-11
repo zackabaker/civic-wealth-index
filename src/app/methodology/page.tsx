@@ -4,6 +4,7 @@ import { Eyebrow } from "@/components/Bits";
 import { getScoredPlaces, getRawPlace } from "@/lib/data";
 import { BENCHMARKS, CWI_VERSION, PILLAR_META, PILLAR_WEIGHTS } from "@/lib/config";
 import type { PillarKey } from "@/lib/types";
+import WeightsExplorer from "@/components/WeightsExplorer";
 
 export const metadata: Metadata = {
   title: "Methodology",
@@ -16,6 +17,14 @@ export default function MethodologyPage() {
   const places = getScoredPlaces();
   // Use any place as the schema template (all share metric metadata).
   const template = getRawPlace(places[0].slug);
+  const liteForWeights = places.map((p) => ({
+    slug: p.slug,
+    name: p.name,
+    state: p.state,
+    profile: p.profile,
+    pw: p.privateWealthScore,
+    pillars: Object.fromEntries(p.pillars.map((pp) => [pp.key, pp.score])),
+  }));
 
   return (
     <div className="mx-auto max-w-3xl px-5 py-14">
@@ -69,6 +78,18 @@ export default function MethodologyPage() {
               </div>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section title="Don't trust our weights? Set your own.">
+        <p>
+          The weights are a judgment call, and judgment calls should be contestable. Drag them and
+          watch the ranking re-sort. If the places you&apos;d expect to lead keep leading across
+          very different weightings, the result is robust; where it flips, you&apos;ve found where
+          the method actually matters.
+        </p>
+        <div className="mt-5">
+          <WeightsExplorer places={liteForWeights} />
         </div>
       </Section>
 

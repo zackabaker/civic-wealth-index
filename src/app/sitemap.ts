@@ -5,7 +5,21 @@ import { ESSAYS } from "@/content/essays";
 const BASE = "https://civicwealthindex.org";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ["", "/rankings", "/compare", "/gaps", "/methodology", "/essays", "/about"];
+  const staticPaths = [
+    "",
+    "/rankings",
+    "/compare",
+    "/gaps",
+    "/methodology",
+    "/essays",
+    "/about",
+    "/data",
+    "/map",
+    "/press",
+    "/carmel-vs-williamson",
+    "/report/indiana-2026",
+    "/does-civic-wealth-pay",
+  ];
   const places = getAllSlugs().map((s) => `/place/${s}`);
   const essays = ESSAYS.map((e) => `/essays/${e.slug}`);
   return [...staticPaths, ...places, ...essays].map((p) => ({
