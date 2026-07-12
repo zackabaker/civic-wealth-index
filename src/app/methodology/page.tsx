@@ -32,22 +32,11 @@ export default function MethodologyPage() {
       <h1 className="font-display text-4xl font-600 tracking-tight text-ink md:text-5xl">
         How the index is built
       </h1>
-      <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-        The Civic Wealth Index measures the <em>stock</em> of public wealth a community has
-        accumulated and maintained — not the annual flow of economic output. Everything here is
-        generated from the same configuration file that produces the scores, so the published method
-        can never drift from the numbers.
+      <p className="mt-4 leading-relaxed text-ink-soft">
+        The index measures the stock of public wealth a place has accumulated and maintained, not
+        annual output. This page is generated from the same configuration file that produces the
+        scores, so the published method cannot drift from the numbers.
       </p>
-
-      <Section title="The principle">
-        <p>
-          GDP is an income statement: it counts what an economy produced this year. A place can post
-          a high number while its bridges rust and its schools coast. Wealth is a balance sheet — the
-          things already built and kept in good repair. Notre Dame took 180 years; a great park
-          system takes generations; a network of maintained roads and sidewalks is decades of
-          compounding decisions. We try to measure that accumulated stock.
-        </p>
-      </Section>
 
       <Section title="Scoring">
         <p>

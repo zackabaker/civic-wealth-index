@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     template: "%s · Civic Wealth Index",
   },
   description:
-    "GDP measures what an economy produces this year. The Civic Wealth Index measures what a community has actually built and maintained — roads, parks, schools, safe streets — and can hand to people it will never know.",
+    "Scores for the accumulated public wealth of American places — infrastructure, parks, schools, health, safety — from public data. All 92 Indiana counties. Open data and method.",
   openGraph: {
     type: "website",
     siteName: "Civic Wealth Index",
     title: "Civic Wealth Index",
     description:
-      "A balance sheet for American places. Measuring accumulated public wealth, not annual output.",
+      "Accumulated public wealth, scored from public data. All 92 Indiana counties.",
   },
 };
 

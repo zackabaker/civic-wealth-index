@@ -58,11 +58,6 @@ export default async function PlacePage({
           <h1 className="font-display text-4xl font-600 tracking-tight text-ink md:text-5xl">
             {place.name}, {place.state}
           </h1>
-          {narrative?.dek && (
-            <p className="mt-3 max-w-2xl font-display text-lg italic leading-snug text-ink-soft">
-              {narrative.dek}
-            </p>
-          )}
           <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-2 text-sm">
             <div>
               <dt className="text-ink-faint">Population</dt>
@@ -104,12 +99,9 @@ export default async function PlacePage({
 
       {place.profile === "estimate" && (
         <div className="mt-8 rounded-xl border border-gold/40 bg-gold/5 px-5 py-3 text-sm text-ink-soft">
-          <strong className="text-ink">Estimate profile.</strong>{" "}
-          This county is scored from shared
-          national data (County Health Rankings and related sources). Real measures — income, life
-          expectancy, traffic deaths, broadband, park access, water safety — sit alongside metrics
-          modeled from how urban or rural the county is. It hasn&apos;t been individually researched
-          or surveyed yet. Every metric below shows its own quality flag.
+          <strong className="text-ink">Estimate.</strong> Measured values from County Health
+          Rankings 2025 and OpenStreetMap; remaining metrics modeled from urbanicity. Not yet
+          individually researched. Quality flags on every metric below.
         </div>
       )}
 
@@ -124,35 +116,40 @@ export default async function PlacePage({
         </p>
       </div>
 
-      {/* Narrative */}
-      {narrative && (
-        <section className="mt-12 max-w-2xl">
-          {narrative.sections.map((s, i) => (
-            <div key={i} className="mb-8">
-              <h2 className="font-display text-2xl font-600 tracking-tight text-ink">{s.heading}</h2>
-              <div className="mt-3 space-y-4">
-                {s.body.map((p, j) => (
-                  <p key={j} className="leading-relaxed text-ink-soft">
-                    {p}
-                  </p>
-                ))}
-              </div>
-            </div>
-          ))}
-          {narrative.byline && (
-            <p className="text-sm text-ink-faint">{narrative.byline}</p>
-          )}
-        </section>
-      )}
-
       {/* Pillar breakdown */}
-      <section className="mt-12">
+      <section className="mt-10">
         <h2 className="mb-1 font-display text-2xl font-600 tracking-tight text-ink">
           The seven pillars
         </h2>
         <div className="rule-civic mb-5 mt-2 max-w-xs" />
         <PillarBreakdown pillars={place.pillars} />
       </section>
+
+      {/* Written profile, collapsed below the data */}
+      {narrative && (
+        <details className="group mt-10 max-w-2xl rounded-xl border border-line bg-paper-raised/60">
+          <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-3.5">
+            <span className="font-600 text-ink">Written profile</span>
+            <span className="text-ink-faint transition-transform group-open:rotate-180" aria-hidden>
+              ▾
+            </span>
+          </summary>
+          <div className="border-t border-line px-5 py-4">
+            {narrative.sections.map((s, i) => (
+              <div key={i} className="mb-6 last:mb-0">
+                <h3 className="font-display text-xl font-600 tracking-tight text-ink">{s.heading}</h3>
+                <div className="mt-2 space-y-3">
+                  {s.body.map((p, j) => (
+                    <p key={j} className="text-sm leading-relaxed text-ink-soft">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </details>
+      )}
 
       {/* Private wealth footnote */}
       {raw && (

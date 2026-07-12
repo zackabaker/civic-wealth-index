@@ -44,10 +44,9 @@ export default function PressPage() {
       <h1 className="font-display text-4xl font-600 tracking-tight text-ink md:text-5xl">
         Press kit
       </h1>
-      <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-        A ready-to-run blurb for every Indiana county, with the numbers already in place. Free to
-        use — please link back to the county&apos;s scorecard. Covering a specific place? Find it
-        below, copy, and go.
+      <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+        A ready-to-run blurb for every Indiana county. Free to use with a link back to the
+        county&apos;s scorecard.
       </p>
       <p className="mt-3 text-sm text-ink-faint">
         Want the raw numbers instead? Grab the full{" "}

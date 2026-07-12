@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import RankTable from "@/components/RankTable";
 import GapScatter from "@/components/GapScatter";
-import { Eyebrow } from "@/components/Bits";
 import { getScoredPlaces } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -14,19 +13,14 @@ export default function RankingsPage() {
   const places = getScoredPlaces();
   return (
     <div className="mx-auto max-w-6xl px-5 py-14">
-      <Eyebrow>The rankings</Eyebrow>
       <h1 className="font-display text-4xl font-600 tracking-tight text-ink md:text-5xl">
-        Ranked by what they&apos;ve built
+        Rankings
       </h1>
-      <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
-        Places ordered by their Civic Wealth Index. The Sovereignty Gap column shows whether each is
-        richer than its public realm (positive) or has built beyond its incomes (negative).
-      </p>
-      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-faint">
-        All {places.filter((p) => p.state === "IN").length} Indiana counties are included, alongside
-        two out-of-state anchors. Rows marked <em>estimate</em> are scored from shared national data
-        with several metrics modeled from urbanicity; <em>researched</em> and <em>field-surveyed</em>{" "}
-        rows are individually sourced. Every score links to its inputs.
+      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
+        All {places.filter((p) => p.state === "IN").length} Indiana counties plus two out-of-state
+        comparisons, ordered by Civic Wealth Index. Gap = private wealth score − CWI.{" "}
+        <em>Estimate</em> rows use shared national data with some modeled metrics;{" "}
+        <em>researched</em>/<em>field-surveyed</em> rows are individually sourced.
       </p>
 
       <div className="mt-10">

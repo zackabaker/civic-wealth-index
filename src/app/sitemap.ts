@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/carmel-vs-williamson",
     "/report/indiana-2026",
     "/does-civic-wealth-pay",
+    "/findings",
   ];
   const places = getAllSlugs().map((s) => `/place/${s}`);
   const essays = ESSAYS.map((e) => `/essays/${e.slug}`);

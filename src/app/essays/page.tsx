@@ -19,13 +19,13 @@ const fmt = (iso: string) =>
 export default function EssaysPage() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-14">
-      <Eyebrow>Essays</Eyebrow>
+      <Eyebrow>Field surveys</Eyebrow>
       <h1 className="font-display text-4xl font-600 tracking-tight text-ink md:text-5xl">
-        Field notes &amp; arguments
+        Surveys
       </h1>
-      <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-        The index is the instrument; these are the observations behind it — what the public realm
-        looks like on the ground, and why it&apos;s the wealth that matters most.
+      <p className="mt-4 leading-relaxed text-ink-soft">
+        On-the-ground observation that the data layer builds on. For data-derived observations, see{" "}
+        <a href="/findings" className="text-civic hover:underline">findings</a>.
       </p>
 
       <div className="mt-10 divide-y divide-line">

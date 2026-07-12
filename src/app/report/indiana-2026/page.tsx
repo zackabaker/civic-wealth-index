@@ -28,9 +28,9 @@ export default function IndianaReport() {
       <h1 className="font-display text-4xl font-600 leading-tight tracking-tight text-ink md:text-6xl">
         The Civic Wealth of Indiana
       </h1>
-      <p className="mt-5 font-display text-xl italic leading-snug text-ink-soft">
-        The first complete accounting of what all {inPlaces.length} Indiana counties have built and
-        kept — the public wealth that outlasts any single year&apos;s income.
+      <p className="mt-4 leading-relaxed text-ink-soft">
+        All {inPlaces.length} Indiana counties scored on accumulated public wealth. Data:
+        County Health Rankings 2025, OpenStreetMap, ACS, and the sources on each scorecard.
       </p>
 
       <div className="rule-civic my-9" />
@@ -42,13 +42,12 @@ export default function IndianaReport() {
       </div>
 
       <section className="mt-12 space-y-5 text-lg leading-relaxed text-ink">
-        <h2 className="font-display text-3xl font-600 tracking-tight text-ink">What the map shows</h2>
-        <p>
-          Civic wealth in Indiana concentrates where you might guess and disperses where you
-          might not. The doughnut of counties around Indianapolis — led by Hamilton, home to
-          Carmel — has spent its growth building a public realm to match. College towns punch far
-          above their income. And a belt of rural and post-industrial counties carries real
-          infrastructure it increasingly struggles to maintain.
+        <h2 className="font-display text-2xl font-600 tracking-tight text-ink">The map</h2>
+        <p className="text-base">
+          Three patterns: the Indianapolis suburban ring scores highest (Hamilton 80, Boone 63,
+          Hendricks 62); college towns over-deliver relative to income (Monroe −38, Tippecanoe −34);
+          post-industrial and rural counties hold inherited infrastructure they struggle to maintain
+          (Lake 36, lowest).
         </p>
       </section>
 
@@ -69,9 +68,10 @@ export default function IndianaReport() {
           </ol>
         </div>
         <div>
-          <h3 className="font-display text-xl font-600 text-ink">Rich, little to show</h3>
+          <h3 className="font-display text-xl font-600 text-ink">Narrowest margins</h3>
           <p className="mt-1 text-sm text-ink-soft">
-            Counties whose private wealth most outruns their public realm.
+            Counties closest to balance. No Indiana county has a positive gap; the widest measured
+            is Williamson County, TN (+24).
           </p>
           <ol className="mt-3 space-y-2">
             {underDeliver.map((p) => (
@@ -82,15 +82,12 @@ export default function IndianaReport() {
       </section>
 
       <section className="mt-14 space-y-5 text-lg leading-relaxed text-ink">
-        <h2 className="font-display text-3xl font-600 tracking-tight text-ink">The roundabout tell</h2>
-        <p>
-          One metric separates the truly-invested from the merely-affluent better than almost any
-          other: the ratio of roundabouts to traffic signals, drawn straight from OpenStreetMap.
-          Hamilton County — Carmel — leads Indiana by a distance, with more than five hundred
-          mapped roundabout ways. It is the clearest signal in the data of a place that chose to
-          spend more, in public, so that everyone moves better later.{" "}
+        <h2 className="font-display text-2xl font-600 tracking-tight text-ink">Roundabouts</h2>
+        <p className="text-base">
+          Hamilton County has 539 mapped roundabout ways — 28.5% of the state total and more than
+          the next four counties combined. 33 of 92 counties have none.{" "}
           <Link href="/carmel-vs-williamson" className="text-civic hover:underline">
-            See how it compares to a richer county that didn&apos;t →
+            Carmel vs. Williamson →
           </Link>
         </p>
       </section>

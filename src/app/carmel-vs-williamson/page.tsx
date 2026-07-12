@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ScoreDial, GapPill, Eyebrow, ScoreBar } from "@/components/Bits";
+import { ScoreDial, GapPill } from "@/components/Bits";
 import { getPlace } from "@/lib/data";
 import { scoreColor } from "@/lib/format";
+import { ScoreBar } from "@/components/Bits";
 
 export const metadata: Metadata = {
-  title: "Carmel vs. Williamson County: the receipts",
+  title: "Carmel vs. Williamson County",
   description:
-    "One county is richer. The other is better built. A data reckoning of Carmel, Indiana against suburban Nashville's Williamson County — the case that started the Civic Wealth Index.",
+    "Williamson County, TN is richer. Carmel's Hamilton County, IN is better built: 539 vs 109 roundabouts, 0.75 vs 0.18 sidewalk coverage, CWI 80 vs 65.",
   openGraph: {
     title: "Carmel vs. Williamson County: the receipts",
     description:
-      "Williamson County, TN is richer than Carmel, IN. Carmel has five times the roundabouts, four times the sidewalks, and a public realm that laps it. Rich isn't the same as well-built.",
+      "The richer county loses almost every row that isn't about money. 539 vs 109 roundabouts.",
   },
 };
 
 const RENN_THREAD = "https://x.com/aaron_renn/status/1937316103195095515";
 const RENN_SITE = "https://www.aaronrenn.com";
 
-function Stat({
+function Row({
   label,
   carmel,
   williamson,
@@ -32,16 +33,16 @@ function Stat({
   note?: string;
 }) {
   return (
-    <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3 border-b border-line/70 py-3.5 last:border-0">
-      <div className={`text-right ${carmelWins ? "font-700 text-civic" : "text-ink-soft"}`}>
-        <span className="tnum text-lg">{carmel}</span>
+    <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3 border-b border-line/70 py-3 last:border-0">
+      <div className={`text-right tnum text-lg ${carmelWins ? "font-700 text-civic" : "text-ink-soft"}`}>
+        {carmel}
       </div>
-      <div className="w-28 text-center text-xs font-600 uppercase tracking-wide text-ink-faint md:w-40">
+      <div className="w-32 text-center text-xs font-600 uppercase tracking-wide text-ink-faint md:w-44">
         {label}
         {note && <div className="mt-0.5 text-[10px] normal-case tracking-normal text-ink-faint/80">{note}</div>}
       </div>
-      <div className={`${!carmelWins ? "font-700 text-gap-bad" : "text-ink-soft"}`}>
-        <span className="tnum text-lg">{williamson}</span>
+      <div className={`tnum text-lg ${!carmelWins ? "font-700 text-gap-bad" : "text-ink-soft"}`}>
+        {williamson}
       </div>
     </div>
   );
@@ -53,161 +54,119 @@ export default function CarmelVsWilliamson() {
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-14">
-      <Eyebrow>A data reckoning</Eyebrow>
-      <h1 className="font-display text-4xl font-600 leading-[1.05] tracking-tight text-ink md:text-6xl">
+      <h1 className="font-display text-4xl font-600 leading-[1.05] tracking-tight text-ink md:text-5xl">
         Carmel vs. Williamson County
       </h1>
-      <p className="mt-5 font-display text-xl italic leading-snug text-ink-soft">
-        One county is richer. The other is better built. This is what happens when you put a number
-        on the difference.
+      <p className="mt-4 leading-relaxed text-ink-soft">
+        Williamson County, TN (suburban Nashville) is richer than Hamilton County, IN (Carmel) —
+        higher incomes, much higher home values. On what each county built with the money, it
+        isn&apos;t close the other way. The richer county loses almost every row that isn&apos;t
+        about money.
       </p>
 
-      {/* Renn credit */}
-      <div className="mt-6 rounded-xl border border-gold/40 bg-gold/5 px-5 py-4 text-sm leading-relaxed text-ink-soft">
-        This comparison began with a field survey by the urbanist{" "}
+      <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+        Source of the comparison: urbanist{" "}
         <a href={RENN_SITE} target="_blank" rel="noopener noreferrer" className="font-600 text-civic hover:underline">
           Aaron Renn
         </a>
-        , who drove suburban Nashville and came back unimpressed — &ldquo;the least impressive wealthy,
-        favored-quarter suburban area I&apos;ve ever visited.&rdquo; He was comparing it, implicitly,
-        to his own Carmel, Indiana. We took his observation and did the thing an observation
-        can&apos;t do by itself: we measured it, county against county, on public data.{" "}
+        &apos;s 2025 field survey of Williamson County (&ldquo;the least impressive wealthy,
+        favored-quarter suburban area I&apos;ve ever visited&rdquo;) —{" "}
         <a href={RENN_THREAD} target="_blank" rel="noopener noreferrer" className="font-600 text-civic hover:underline">
-          Read Renn&apos;s original thread →
+          original thread
         </a>
-      </div>
-
-      {/* The paradox */}
-      <div className="rule-civic my-9" />
-      <div className="space-y-5 text-lg leading-relaxed text-ink">
-        <p>
-          Start with the fact that should settle it: <strong>Williamson County is the richer
-          place.</strong> Its median household income of $131,202 edges Carmel&apos;s $125,509, and
-          its median home, at $673,700, is worth half again as much as Carmel&apos;s $437,400. By the
-          usual scoreboard — incomes, home values, the GDP-shaped view of a place — Williamson wins,
-          and it isn&apos;t close.
-        </p>
-        <p>
-          Now look at what each county actually built with that wealth. This is where the scoreboard
-          flips, and hard.
-        </p>
-      </div>
-
-      {/* Hard numbers */}
-      <div className="mt-8 rounded-2xl border border-line bg-paper-raised p-5 md:p-7">
-        <div className="mb-4 grid grid-cols-[1fr_auto_1fr] gap-3 text-center">
-          <div className="font-display text-lg font-700 text-civic">Carmel<div className="text-xs font-500 text-ink-faint">Hamilton County, IN</div></div>
-          <div className="w-28 md:w-40" />
-          <div className="font-display text-lg font-700 text-gap-bad">Williamson<div className="text-xs font-500 text-ink-faint">Franklin, TN</div></div>
-        </div>
-        <Stat label="Median income" carmel="$125,509" williamson="$131,202" carmelWins={false} />
-        <Stat label="Median home value" carmel="$437,400" williamson="$673,700" carmelWins={false} />
-        <Stat label="Roundabouts (OSM ways)" carmel="539" williamson="109" carmelWins note="vs. signalized intersections" />
-        <Stat label="Traffic signals (OSM)" carmel="320" williamson="384" carmelWins />
-        <Stat label="Sidewalk coverage" carmel="0.75" williamson="0.18" carmelWins note="mapped sidewalk-km per road-km" />
-        <Stat label="Playground quality" carmel="90" williamson="38" carmelWins note="field survey, 0–100" />
-        <Stat label="Civic Wealth Index" carmel={carmel.cwi.toFixed(0)} williamson={will.cwi.toFixed(0)} carmelWins note="0–100 composite" />
-      </div>
-      <p className="mt-3 text-center text-sm text-ink-faint">
-        Green wins the row. The richer county loses almost every one that isn&apos;t about money.
+        . We put numbers on it.
       </p>
 
-      {/* Scorecards */}
-      <div className="mt-12 grid gap-4 sm:grid-cols-2">
+      {/* The table */}
+      <div className="mt-8 rounded-2xl border border-line bg-paper-raised p-5 md:p-7">
+        <div className="mb-4 grid grid-cols-[1fr_auto_1fr] gap-3 text-center">
+          <div className="font-display text-lg font-700 text-civic">
+            Carmel
+            <div className="text-xs font-500 text-ink-faint">Hamilton County, IN</div>
+          </div>
+          <div className="w-32 md:w-44" />
+          <div className="font-display text-lg font-700 text-gap-bad">
+            Williamson
+            <div className="text-xs font-500 text-ink-faint">Franklin, TN</div>
+          </div>
+        </div>
+        <Row label="Median income" carmel="$125,509" williamson="$131,202" carmelWins={false} />
+        <Row label="Median home value" carmel="$437,400" williamson="$673,700" carmelWins={false} />
+        <Row label="Roundabouts" carmel="539" williamson="109" carmelWins note="OSM ways, whole county" />
+        <Row label="Traffic signals" carmel="320" williamson="384" carmelWins note="fewer = better flow" />
+        <Row label="Sidewalk coverage" carmel="0.75" williamson="0.18" carmelWins note="mapped km per road-km" />
+        <Row label="Playground quality" carmel="90" williamson="38" carmelWins note="field survey, 0–100" />
+        <Row label="Civic Wealth Index" carmel={carmel.cwi.toFixed(0)} williamson={will.cwi.toFixed(0)} carmelWins />
+        <Row
+          label="Sovereignty Gap"
+          carmel={`${carmel.sovereigntyGap}`}
+          williamson={`+${will.sovereigntyGap}`}
+          carmelWins
+          note="private − civic; +24 is the widest measured"
+        />
+      </div>
+
+      {/* Pillars */}
+      <div className="mt-8 rounded-xl border border-line bg-paper-raised p-5">
+        <div className="mb-2 text-xs uppercase tracking-wider text-ink-faint">Pillar scores</div>
+        {carmel.pillars.map((pa, i) => {
+          const pb = will.pillars[i];
+          return (
+            <div key={pa.key} className="grid grid-cols-[1fr_120px_1fr] items-center gap-3 py-1.5 text-sm">
+              <div className="flex items-center justify-end gap-2">
+                <span className="tnum font-600" style={{ color: scoreColor(pa.score) }}>{pa.score.toFixed(0)}</span>
+                <div className="w-20 scale-x-[-1]"><ScoreBar score={pa.score} height={6} /></div>
+              </div>
+              <div className="text-center text-xs text-ink-soft">{pa.label}</div>
+              <div className="flex items-center gap-2">
+                <div className="w-20"><ScoreBar score={pb.score} height={6} /></div>
+                <span className="tnum font-600" style={{ color: scoreColor(pb.score) }}>{pb.score.toFixed(0)}</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Context, brief */}
+      <div className="mt-8 space-y-4 leading-relaxed text-ink">
+        <p>
+          The mechanism is a policy choice, not a mystery. Carmel spent its growth years building
+          the public realm — 150+ roundabouts under one long-serving mayor, the Monon Trail network,
+          new parks and playgrounds. Williamson County&apos;s boom went into private domains: larger
+          houses, rural estates, subdivision amenities. Its public playgrounds date to the
+          1990s–2000s; new upscale subdivisions were built without sidewalks. Downtown Franklin is
+          the exception, and it&apos;s excellent.
+        </p>
+        <p className="text-sm text-ink-soft">
+          Williamson&apos;s measured strengths are real: top-ranked schools (Education 87), life
+          expectancy 81.3 (Health &amp; Safety 91). The deficit is specifically the shared built
+          environment: Public Realm 37, Stewardship 34.
+        </p>
+      </div>
+
+      <div className="mt-8 grid gap-4 sm:grid-cols-2">
         {[carmel, will].map((p) => (
-          <div key={p.slug} className="rounded-2xl border border-line bg-paper-raised p-6 text-center">
-            <Link href={`/place/${p.slug}`} className="font-display text-xl font-600 text-ink hover:text-civic">
+          <div key={p.slug} className="rounded-2xl border border-line bg-paper-raised p-5 text-center">
+            <Link href={`/place/${p.slug}`} className="font-display text-lg font-600 text-ink hover:text-civic">
               {p.name}, {p.state}
             </Link>
-            <div className="mt-4 flex justify-center">
-              <ScoreDial score={p.cwi} />
-            </div>
-            <div className="mt-3 flex justify-center">
-              <GapPill gap={p.sovereigntyGap} />
-            </div>
+            <div className="mt-3 flex justify-center"><ScoreDial score={p.cwi} size={100} /></div>
+            <div className="mt-2 flex justify-center"><GapPill gap={p.sovereigntyGap} /></div>
           </div>
         ))}
       </div>
 
-      {/* Renn's framework */}
-      <div className="rule-civic my-12" />
-      <div className="space-y-5 text-lg leading-relaxed text-ink">
-        <h2 className="font-display text-3xl font-600 tracking-tight text-ink">The favored quarter, tested</h2>
-        <p>
-          Renn has spent years on a simple idea: a growing suburb gets exactly one window — the
-          growth years — to build the public realm that will keep it valuable after the growth
-          stops. Carmel used its window. Under a long-serving mayor it put in more than a hundred and
-          fifty roundabouts, a spine of multi-use trails, an arts district, a concert hall, and it
-          kept its playgrounds new. Williamson County spent its boom on private domains: bigger
-          houses, rural estates, subdivision amenities behind the gate — and left the commons as an
-          afterthought. Its downtown Franklin is genuinely lovely; almost everything around it is
-          sprawl without sidewalks.
-        </p>
-        <p>
-          The Civic Wealth Index is built to catch precisely this. It ignores what a place earns and
-          measures what it has built and kept: movement, public realm, schools, health and safety,
-          the utility backbone, civic fabric, and whether it&apos;s still investing. On that ledger
-          Carmel scores {carmel.cwi.toFixed(0)} and Williamson {will.cwi.toFixed(0)} — and the
-          Sovereignty Gap, the distance between a place&apos;s private wealth and its public wealth,
-          runs {will.sovereigntyGap > 0 ? "+" : ""}
-          {will.sovereigntyGap} for Williamson, the widest we&apos;ve measured. It is rich, and it
-          has remarkably little common wealth to show for it.
-        </p>
-        <PillarStrip a={carmel} b={will} />
-        <p>
-          None of this makes Williamson a bad place to be wealthy. It makes it a cautionary tale
-          about what wealth is for. The point of a boom, as Renn keeps saying and as Carmel&apos;s
-          mayor put it, is to build things for &ldquo;people we will never know.&rdquo; One of these
-          counties did. The scoreboard that only counts money will never see the difference. This
-          one is built to.
-        </p>
-      </div>
-
-      {/* CTA */}
-      <div className="mt-12 rounded-2xl border border-line bg-paper-raised/60 p-6">
-        <p className="text-ink-soft">
-          Credit where it&apos;s due: this comparison exists because Aaron Renn drove Williamson
-          County and wrote down what he saw. Read his{" "}
-          <a href={RENN_THREAD} target="_blank" rel="noopener noreferrer" className="font-600 text-civic hover:underline">original thread</a>{" "}
-          and his{" "}
-          <a href={RENN_SITE} target="_blank" rel="noopener noreferrer" className="font-600 text-civic hover:underline">newsletter</a>.
-        </p>
-        <div className="mt-4 flex flex-wrap gap-3 text-sm">
-          <Link href="/compare?a=hamilton-county-in&b=williamson-county-tn" className="rounded-lg bg-civic px-4 py-2 font-600 text-paper-raised hover:bg-civic-bright">
-            See the full comparison
-          </Link>
-          <Link href="/gaps" className="rounded-lg border border-line-strong px-4 py-2 font-600 text-ink hover:bg-line/50">
-            What&apos;s the Sovereignty Gap?
-          </Link>
-          <Link href="/methodology" className="rounded-lg border border-line-strong px-4 py-2 font-600 text-ink hover:bg-line/50">
-            How it&apos;s measured
-          </Link>
-        </div>
+      <div className="mt-8 flex flex-wrap gap-3 text-sm">
+        <Link href="/compare?a=hamilton-county-in&b=williamson-county-tn" className="rounded-lg bg-civic px-4 py-2 font-600 text-paper-raised hover:bg-civic-bright">
+          Metric-level comparison
+        </Link>
+        <Link href="/methodology" className="rounded-lg border border-line-strong px-4 py-2 font-600 text-ink hover:bg-line/50">
+          Method
+        </Link>
+        <a href={RENN_THREAD} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-line-strong px-4 py-2 font-600 text-ink hover:bg-line/50">
+          Renn&apos;s survey
+        </a>
       </div>
     </article>
-  );
-}
-
-function PillarStrip({ a, b }: { a: ReturnType<typeof getPlace>; b: ReturnType<typeof getPlace> }) {
-  if (!a || !b) return null;
-  return (
-    <div className="not-prose my-6 rounded-xl border border-line bg-paper-raised p-5">
-      {a.pillars.map((pa, i) => {
-        const pb = b.pillars[i];
-        return (
-          <div key={pa.key} className="grid grid-cols-[1fr_120px_1fr] items-center gap-3 py-2 text-sm">
-            <div className="flex items-center justify-end gap-2">
-              <span className="tnum font-600" style={{ color: scoreColor(pa.score) }}>{pa.score.toFixed(0)}</span>
-              <div className="w-20 scale-x-[-1]"><ScoreBar score={pa.score} height={6} /></div>
-            </div>
-            <div className="text-center text-xs text-ink-soft">{pa.label}</div>
-            <div className="flex items-center gap-2">
-              <div className="w-20"><ScoreBar score={pb.score} height={6} /></div>
-              <span className="tnum font-600" style={{ color: scoreColor(pb.score) }}>{pb.score.toFixed(0)}</span>
-            </div>
-          </div>
-        );
-      })}
-    </div>
   );
 }

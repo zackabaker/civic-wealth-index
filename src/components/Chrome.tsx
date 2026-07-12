@@ -3,10 +3,10 @@ import { CWI_VERSION } from "@/lib/config";
 
 const NAV = [
   { href: "/rankings", label: "Rankings" },
+  { href: "/map", label: "Map" },
+  { href: "/findings", label: "Findings" },
   { href: "/compare", label: "Compare" },
-  { href: "/gaps", label: "The Gap" },
   { href: "/methodology", label: "Method" },
-  { href: "/essays", label: "Essays" },
   { href: "/data", label: "Data" },
 ];
 
@@ -58,17 +58,18 @@ export function SiteFooter() {
               <span className="font-display text-base font-600">Civic Wealth Index</span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              A public measure of what American communities have built to last —
-              the wealth GDP can&apos;t see. Independent, open-method, {CWI_VERSION}.
+              A measure of accumulated public wealth in American places. Open data, open method,{" "}
+              {CWI_VERSION}.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm sm:grid-cols-3">
             {[
               ...NAV,
-              { href: "/map", label: "Map" },
+              { href: "/gaps", label: "The Gap" },
               { href: "/carmel-vs-williamson", label: "Carmel vs. Williamson" },
               { href: "/report/indiana-2026", label: "Indiana 2026 report" },
-              { href: "/does-civic-wealth-pay", label: "Does it pay?" },
+              { href: "/does-civic-wealth-pay", label: "Validation study" },
+              { href: "/essays", label: "Surveys" },
               { href: "/press", label: "Press kit" },
               { href: "/about", label: "About" },
             ].map((n) => (
@@ -78,12 +79,8 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
-        <div className="mt-10 flex flex-col gap-2 border-t border-line pt-6 text-xs text-ink-faint md:flex-row md:justify-between">
-          <span>
-            &ldquo;We are building this city for our children and grandchildren and
-            people we will never know.&rdquo;
-          </span>
-          <span className="tnum">Civic Wealth Index {CWI_VERSION} · public data, open method</span>
+        <div className="mt-10 border-t border-line pt-6 text-xs text-ink-faint">
+          <span className="tnum">Civic Wealth Index {CWI_VERSION} · public data, open method · CC BY 4.0</span>
         </div>
       </div>
     </footer>

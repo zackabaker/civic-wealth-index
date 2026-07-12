@@ -21,16 +21,16 @@ export default function ValidationPage() {
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-14">
-      <Eyebrow>An honest test</Eyebrow>
+      <Eyebrow>Validation study</Eyebrow>
       <h1 className="font-display text-4xl font-600 leading-tight tracking-tight text-ink md:text-5xl">
-        Does civic wealth pay?
+        Does civic wealth predict growth?
       </h1>
-      <p className="mt-5 font-display text-xl italic leading-snug text-ink-soft">
-        We ran the obvious test — does a county&apos;s civic wealth predict its growth? — and we&apos;re
-        going to tell you what we found even though it isn&apos;t the tidy answer.
+      <p className="mt-4 leading-relaxed text-ink-soft">
+        Test: CWI vs. 2020–2024 population change, 92 Indiana counties. Result: no, once income is
+        controlled for.
       </p>
 
-      <div className="rule-civic my-9" />
+      <div className="rule-civic my-8" />
 
       {/* headline numbers */}
       <div className="grid grid-cols-3 gap-4 text-center">
@@ -57,32 +57,17 @@ export default function ValidationPage() {
         ))}
       </section>
 
-      {/* the reframe — why this is the point, not a problem */}
-      <section className="mt-12 rounded-2xl border border-civic/30 bg-civic/5 p-6 md:p-8">
-        <h2 className="font-display text-2xl font-600 tracking-tight text-ink">
-          Why we measure it anyway
-        </h2>
-        <div className="mt-3 space-y-4 text-lg leading-relaxed text-ink">
-          <p>
-            A null result here would sink the index only if its claim were &ldquo;civic wealth makes
-            you grow.&rdquo; That was never the claim. The whole premise is that public wealth is
-            worth having <em>for its own sake</em> — a great park, a safe street, a school that
-            actually teaches, a bridge that doesn&apos;t fail — and worth handing to people who
-            aren&apos;t born yet. That value doesn&apos;t need to show up as migration to be real.
-          </p>
-          <p>
-            Growth is what GDP-thinking rewards, and chasing it is how Williamson County ended up
-            rich and under-built. The point of this index is to name the wealth that the growth
-            scoreboard can&apos;t see — not to become another growth scoreboard. So we&apos;ll report
-            the honest finding, keep the caveats in plain view, and go on measuring the thing because
-            it matters, not because it pays.
-          </p>
-        </div>
+      <section className="mt-10 rounded-xl border border-line bg-paper-raised/70 p-5">
+        <p className="leading-relaxed text-ink-soft">
+          <strong className="text-ink">Scope note:</strong> the index claims civic wealth is worth
+          measuring, not that it causes growth. This test checks the stronger claim and rejects it;
+          the descriptive use is unaffected. Caveats below.
+        </p>
       </section>
 
       {/* standouts */}
       <section className="mt-12">
-        <h2 className="font-display text-2xl font-600 tracking-tight text-ink">The revealing cases</h2>
+        <h2 className="font-display text-2xl font-600 tracking-tight text-ink">Notable cases</h2>
         <div className="mt-4 space-y-3">
           {s.standouts.map((st) => (
             <div key={st.county} className="rounded-xl border border-line bg-paper-raised px-4 py-3">
@@ -95,10 +80,9 @@ export default function ValidationPage() {
 
       {/* caveats */}
       <section className="mt-12">
-        <h2 className="font-display text-2xl font-600 tracking-tight text-ink">Everything wrong with this test</h2>
+        <h2 className="font-display text-2xl font-600 tracking-tight text-ink">Limitations</h2>
         <p className="mt-2 text-sm text-ink-soft">
-          In the spirit of an instrument that invites correction, here is what we&apos;d fix given
-          better data. Based on {s.n} counties.
+          Based on {s.n} counties.
         </p>
         <ul className="mt-4 list-disc space-y-2 pl-5 text-ink-soft">
           {s.caveats.map((c, i) => (
